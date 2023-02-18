@@ -1,0 +1,39 @@
+@import url("https://shogo82148.github.io/genjyuugothic-subsets/GenJyuuGothic-P-Normal/GenJyuuGothic-P-Normal.css");
+@import url("https://shogo82148.github.io/genjyuugothic-subsets/GenJyuuGothic-P-Medium/GenJyuuGothic-P-Medium.css");
+@import url("https://shogo82148.github.io/genjyuugothic-subsets/GenJyuuGothic-P-Bold/GenJyuuGothic-P-Bold.css");
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: GenJyuuGothicP, sans-serif;
+    //font-family: 'Noto Sans TC', sans-serif;
+    height: 100%;
+  }
+  body {
+    @apply font-medium tracking-wider md:text-lg md:tracking-wide h-full cursor-main;
+  }
+  #app {
+    position: relative;
+    overflow-x: hidden;
+    height: 100%;
+  }
+  h1 {
+    @apply font-bold text-xl leading-6 tracking-wider md:text-4xl md:leading-tight md:tracking-wide;
+  }
+  h2 {
+    @apply font-bold text-3xl tracking-wider md:text-6xl md:leading-tight md:tracking-wide;
+  }
+  h3 {
+    @apply font-bold text-2xl tracking-wider md:text-5xl md:leading-tight md:tracking-wide;
+  }
+  h4 {
+    @apply font-bold text-xl tracking-wider md:text-4xl md:leading-tight md:tracking-wide;
+  }
+  h5 {
+    @apply font-bold text-lg tracking-wider md:text-2xl md:tracking-wide;
+  }
+}
