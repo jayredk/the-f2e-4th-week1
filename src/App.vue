@@ -227,9 +227,7 @@ import AppHeader from "@/components/AppHeader.vue";
 
       <div class="container mb-16 text-center md:flex">
         <div class="md:mx-2">
-          <p class="text-xl text-highlight lg:text-2xl">
-            羨慕別人的酷酷網頁動畫？
-          </p>
+          <h4 class="text-highlight">羨慕別人的酷酷網頁動畫？</h4>
           <picture>
             <source
               media="(min-width: 1175px)"
@@ -239,13 +237,11 @@ import AppHeader from "@/components/AppHeader.vue";
           </picture>
         </div>
         <div class="md:mx-2">
-          <p class="text-xl text-highlight lg:text-2xl">滿足不了同事的許願？</p>
+          <h4 class="text-highlight">滿足不了同事的許願？</h4>
           <img src="./assets/images/main/question_2.png" alt="Q2" />
         </div>
         <div class="md:mx-2">
-          <p class="text-xl text-highlight lg:text-2xl">
-            動畫技能樹太雜無從下手？
-          </p>
+          <h4 class="text-highlight">動畫技能樹太雜無從下手？</h4>
           <picture>
             <source
               media="(min-width: 1175px)"
@@ -263,9 +259,9 @@ import AppHeader from "@/components/AppHeader.vue";
       >
         本屆主題：互動式網頁設計
       </h3>
-      <p class="mb-10 text-center text-xl text-secondary-dark lg:mb-16">
+      <h5 class="mb-10 text-center text-xl text-secondary-dark lg:mb-16">
         以下兩個角色進行攜手合作
-      </p>
+      </h5>
 
       <div
         class="container text-xl text-primary md:text-4xl lg:flex lg:justify-between"
@@ -284,7 +280,7 @@ import AppHeader from "@/components/AppHeader.vue";
               src="./assets/images/btn/btn_join.png"
               alt="btn_join"
             />
-            <p>前端工程師</p>
+            <h4>前端工程師</h4>
           </div>
           <img
             class="w-[157px] md:w-[228px] lg:hidden"
@@ -306,7 +302,7 @@ import AppHeader from "@/components/AppHeader.vue";
               src="./assets/images/btn/btn_join.png"
               alt="btn_join"
             />
-            <p>ＵＩ設計師</p>
+            <h4>ＵＩ設計師</h4>
           </div>
           <img
             class="w-[157px] md:w-[228px] lg:hidden"
@@ -328,13 +324,109 @@ import AppHeader from "@/components/AppHeader.vue";
               src="./assets/images/btn/btn_join.png"
               alt="btn_join"
             />
-            <p>團體組(UI+前端)</p>
+            <h4>團體組(UI+前端)</h4>
           </div>
           <img
             class="w-[157px] md:w-[228px] lg:hidden"
             src="./assets/images/character/character_team.png"
             alt="character_team"
           />
+        </div>
+      </div>
+    </section>
+
+    <section id="bk4">
+      <h3
+        class="mb-3 w-full bg-[url('@/assets/images/bg/bg_talking_c.png')] bg-[length:100%_100%] bg-bottom bg-no-repeat pb-6 pt-3 text-center text-2xl font-bold text-primary lg:bg-[url('@/assets/images/bg/bg_talking.png')] lg:bg-[length:940px_151px] lg:px-16 lg:pt-6 lg:pb-16 lg:text-6xl"
+      >
+        年度最強合作，三大主題來襲
+      </h3>
+      <h5 class="mb-10 text-center text-xl text-secondary-dark lg:mb-24">
+        各路廠商強強聯手<br />共同設計出接地氣的網頁互動挑戰關卡
+      </h5>
+      <div class="container text-center lg:text-left">
+        <div class="mb-10 lg:flex lg:max-w-[820px] lg:items-start">
+          <img
+            class="mx-auto w-[200px] lg:mr-10 lg:ml-0 lg:w-[280px]"
+            src="./assets/images/main/week_1.png"
+            alt="week1"
+          />
+          <div class="flex flex-col items-center lg:block">
+            <h2 class="mb-2 text-highlight">WEEK 1</h2>
+            <h3 class="mb-2 text-primary lg:mb-5">The F2E 活動網站設計</h3>
+            <p
+              class="mb-4 inline-block rounded-full border border-secondary-dark px-6 text-lg text-secondary-dark lg:mr-2"
+            >
+              Parallax Scrolling
+            </p>
+            <p
+              class="mb-4 inline-block rounded-full border border-secondary-dark px-6 text-lg text-secondary-dark"
+            >
+              #版塊設計
+            </p>
+            <button
+              type="button"
+              class="mx-auto block rounded-full bg-secondary-dark px-6 py-2 text-white lg:m-0"
+            >
+              查看關卡細節
+            </button>
+          </div>
+        </div>
+        <div
+          class="mb-10 lg:ml-auto lg:flex lg:max-w-[820px] lg:flex-row-reverse"
+        >
+          <img
+            class="mx-auto w-[200px] lg:ml-10 lg:mr-0 lg:w-[280px]"
+            src="./assets/images/main/week_2.png"
+            alt="week2"
+          />
+          <div class="flex flex-col items-center lg:block lg:text-right">
+            <h2 class="mb-2 text-highlight">WEEK 2</h2>
+            <h3 class="mb-2 text-primary lg:mb-5">今晚，我想來點點簽</h3>
+            <p
+              class="mb-4 inline-block w-fit rounded-full border border-secondary-dark px-6 text-lg text-secondary-dark lg:mr-2"
+            >
+              Canvas
+            </p>
+            <p
+              class="mb-4 inline-block rounded-full border border-secondary-dark px-6 text-lg text-secondary-dark"
+            >
+              #凱鈿行動科技
+            </p>
+            <button
+              type="button"
+              class="mx-auto block rounded-full bg-secondary-dark px-6 py-2 text-white lg:mr-0"
+            >
+              查看關卡細節
+            </button>
+          </div>
+        </div>
+        <div class="mb-10 lg:flex lg:max-w-[820px] lg:items-start">
+          <img
+            class="mx-auto w-[200px] lg:mr-10 lg:ml-0 lg:w-[280px]"
+            src="./assets/images/main/week_3.png"
+            alt="week3"
+          />
+          <div class="flex flex-col items-center lg:block">
+            <h2 class="mb-2 text-highlight">WEEK 3</h2>
+            <h3 class="mb-2 text-primary lg:mb-5">Scrum 新手村</h3>
+            <p
+              class="mb-4 inline-block rounded-full border border-secondary-dark px-6 text-lg text-secondary-dark lg:mr-2"
+            >
+              JS draggable
+            </p>
+            <p
+              class="mb-4 inline-block rounded-full border border-secondary-dark px-6 text-lg text-secondary-dark"
+            >
+              #鈦坦科技
+            </p>
+            <button
+              type="button"
+              class="mx-auto block rounded-full bg-secondary-dark px-6 py-2 text-white lg:m-0"
+            >
+              查看關卡細節
+            </button>
+          </div>
         </div>
       </div>
     </section>
