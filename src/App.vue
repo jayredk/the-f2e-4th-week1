@@ -8,38 +8,38 @@ import AppHeader from "@/components/AppHeader.vue";
   <div id="index-bg">
     <img
       class="hidden w-full w-[1430px] lg:absolute lg:block"
-      src="./assets/images/main/start.png"
+      src="@/assets/images/main/start.png"
       alt="start"
     />
     <img
       class="absolute top-[45%] -left-5 w-[113px] md:w-[271px]"
-      src="./assets/images/bg/bg_decorate_01.png"
+      src="@/assets/images/bg/bg_decorate_01.png"
       alt="bg_decorate_01"
     />
     <img
       class="absolute top-[45%] -right-9 w-[127px] md:-right-[3rem] md:w-[305px]"
-      src="./assets/images/bg/bg_decorate_05.png"
+      src="@/assets/images/bg/bg_decorate_05.png"
       alt="bg_decorate_05"
     />
     <div id="readyFrame" class="absolute top-[60%] right-0">
       <img
         class="relative z-10 w-[120px] md:w-[275px]"
-        src="./assets/images/main/ready_frame.png"
+        src="@/assets/images/main/ready_frame.png"
         alt="ready_frame"
       />
       <img
         class="absolute top-[28%] left-[12%] w-[22px] md:w-[49px]"
-        src="./assets/images/main/ready_3.png"
+        src="@/assets/images/main/ready_3.png"
         alt="ready_3"
       />
       <img
         class="absolute left-[35%] top-[28%] w-[22px] md:w-[49px]"
-        src="./assets/images/main/ready_2.png"
+        src="@/assets/images/main/ready_2.png"
         alt="ready_2"
       />
       <img
         class="absolute top-[28%] left-[60%] w-[22px] md:w-[49px]"
-        src="./assets/images/main/ready_1.png"
+        src="@/assets/images/main/ready_1.png"
         alt="ready_1"
       />
       <p
@@ -231,23 +231,23 @@ import AppHeader from "@/components/AppHeader.vue";
           <picture>
             <source
               media="(min-width: 1175px)"
-              srcset="./assets/images/main/question_1.png"
+              srcset="@/assets/images/main/question_1.png"
             />
-            <img src="./assets/images/main/question_1_m.png" alt="Q1-m" />
+            <img src="@/assets/images/main/question_1_m.png" alt="Q1-m" />
           </picture>
         </div>
         <div class="md:mx-2">
           <h4 class="text-highlight">滿足不了同事的許願？</h4>
-          <img src="./assets/images/main/question_2.png" alt="Q2" />
+          <img src="@/assets/images/main/question_2.png" alt="Q2" />
         </div>
         <div class="md:mx-2">
           <h4 class="text-highlight">動畫技能樹太雜無從下手？</h4>
           <picture>
             <source
               media="(min-width: 1175px)"
-              srcset="./assets/images/main/question_3.png"
+              srcset="@/assets/images/main/question_3.png"
             />
-            <img src="./assets/images/main/question_3_m.png" alt="Q3-m" />
+            <img src="@/assets/images/main/question_3_m.png" alt="Q3-m" />
           </picture>
         </div>
       </div>
@@ -272,19 +272,19 @@ import AppHeader from "@/components/AppHeader.vue";
           <div class="flex flex-col items-center">
             <img
               class="mb-1 w-[57px]"
-              src="./assets/images/btn/btn_joinHand.png"
+              src="@/assets/images/btn/btn_joinHand.png"
               alt="btn-joinHand"
             />
             <img
               class="mb-4 w-[103px]"
-              src="./assets/images/btn/btn_join.png"
+              src="@/assets/images/btn/btn_join.png"
               alt="btn_join"
             />
             <h4>前端工程師</h4>
           </div>
           <img
             class="w-[157px] md:w-[228px] lg:hidden"
-            src="./assets/images/character/character_f2e.png"
+            src="@/assets/images/character/character_f2e.png"
             alt="character_f2e"
           />
         </div>
@@ -294,19 +294,19 @@ import AppHeader from "@/components/AppHeader.vue";
           <div class="flex flex-col items-center">
             <img
               class="mb-1 w-[57px]"
-              src="./assets/images/btn/btn_joinHand.png"
+              src="@/assets/images/btn/btn_joinHand.png"
               alt="btn-joinHand"
             />
             <img
               class="mb-4 w-[103px]"
-              src="./assets/images/btn/btn_join.png"
+              src="@/assets/images/btn/btn_join.png"
               alt="btn_join"
             />
             <h4>ＵＩ設計師</h4>
           </div>
           <img
             class="w-[157px] md:w-[228px] lg:hidden"
-            src="./assets/images/character/character_ui.png"
+            src="@/assets/images/character/character_ui.png"
             alt="character_ui"
           />
         </div>
@@ -316,19 +316,19 @@ import AppHeader from "@/components/AppHeader.vue";
           <div class="flex flex-col items-center">
             <img
               class="mb-1 w-[57px]"
-              src="./assets/images/btn/btn_joinHand.png"
+              src="@/assets/images/btn/btn_joinHand.png"
               alt="btn-joinHand"
             />
             <img
               class="mb-4 w-[103px]"
-              src="./assets/images/btn/btn_join.png"
+              src="@/assets/images/btn/btn_join.png"
               alt="btn_join"
             />
             <h4>團體組(UI+前端)</h4>
           </div>
           <img
             class="w-[157px] md:w-[228px] lg:hidden"
-            src="./assets/images/character/character_team.png"
+            src="@/assets/images/character/character_team.png"
             alt="character_team"
           />
         </div>
@@ -344,11 +344,11 @@ import AppHeader from "@/components/AppHeader.vue";
       <h5 class="mb-10 text-center text-xl text-secondary-dark lg:mb-24">
         各路廠商強強聯手<br />共同設計出接地氣的網頁互動挑戰關卡
       </h5>
-      <div class="container text-center lg:text-left">
+      <div class="container mb-16 text-center lg:text-left">
         <div class="mb-10 lg:flex lg:max-w-[820px] lg:items-start">
           <img
             class="mx-auto w-[200px] lg:mr-10 lg:ml-0 lg:w-[280px]"
-            src="./assets/images/main/week_1.png"
+            src="@/assets/images/main/week_1.png"
             alt="week1"
           />
           <div class="flex flex-col items-center lg:block">
@@ -377,7 +377,7 @@ import AppHeader from "@/components/AppHeader.vue";
         >
           <img
             class="mx-auto w-[200px] lg:ml-10 lg:mr-0 lg:w-[280px]"
-            src="./assets/images/main/week_2.png"
+            src="@/assets/images/main/week_2.png"
             alt="week2"
           />
           <div class="flex flex-col items-center lg:block lg:text-right">
@@ -401,10 +401,10 @@ import AppHeader from "@/components/AppHeader.vue";
             </button>
           </div>
         </div>
-        <div class="mb-10 lg:flex lg:max-w-[820px] lg:items-start">
+        <div class="lg:flex lg:max-w-[820px] lg:items-start">
           <img
             class="mx-auto w-[200px] lg:mr-10 lg:ml-0 lg:w-[280px]"
-            src="./assets/images/main/week_3.png"
+            src="@/assets/images/main/week_3.png"
             alt="week3"
           />
           <div class="flex flex-col items-center lg:block">
@@ -431,28 +431,124 @@ import AppHeader from "@/components/AppHeader.vue";
       </div>
     </section>
 
+    <section id="bk5">
+      <h3
+        class="mb-16 w-full bg-[url('@/assets/images/bg/bg_talking_c.png')] bg-[length:100%_100%] bg-bottom bg-no-repeat pb-6 pt-3 text-center text-2xl font-bold text-primary lg:hidden"
+      >
+        重要時程
+      </h3>
+      <div class="container relative lg:flex lg:items-start lg:justify-between">
+        <div class="mb-20 flex flex-col items-center justify-center lg:mb-0">
+          <div class="flex h-[160px] flex-col items-center justify-center">
+            <img
+              src="@/assets/images/btn/btn_joinHand.png"
+              alt="joinHand"
+              class="mb-1 w-[57px]"
+            />
+            <img
+              src="@/assets/images/btn/btn_join.png"
+              alt="join"
+              class="mb-3 w-[103px]"
+            />
+          </div>
+          <h2 class="mb-3 text-highlight">SIGN UP</h2>
+          <h4 class="mb-3 rounded-full bg-primary px-7 py-2 text-white">
+            10/13 - 11/6
+          </h4>
+          <h5 class="text-secondary-dark lg:mb-5">截止前可修改報名組別</h5>
+          <div class="hidden h-[140px] w-8 lg:block">
+            <img
+              class="h-full w-full object-cover object-bottom"
+              src="@/assets/images/main/date_weekLine.png"
+              alt="date-weekline"
+            />
+          </div>
+        </div>
+        <div class="mb-20 flex flex-col items-center justify-center lg:mb-0">
+          <div class="h-[160px]">
+            <img
+              src="@/assets/images/main/date_start.png"
+              alt="date-start"
+              class="mb-2 w-[140px]"
+            />
+          </div>
+          <h2 class="mb-3 text-highlight">START</h2>
+          <h4 class="mb-3 rounded-full bg-primary px-7 py-2 text-white">
+            10/31 - 11/28
+          </h4>
+          <h5 class="text-center text-secondary-dark lg:mb-5">
+            10/31(一) UI、團體組開賽<br />11/7(一) 前端組開賽
+          </h5>
+          <div class="hidden h-[70px] w-8 lg:block">
+            <img
+              class="h-full w-full object-cover object-bottom"
+              src="@/assets/images/main/date_weekLine.png"
+              alt="date-weekline"
+            />
+          </div>
+        </div>
+        <div class="mb-20 flex flex-col items-center justify-center lg:mb-0">
+          <div class="h-[160px]">
+            <img
+              src="@/assets/images/main/date_upload.png"
+              alt="date-upload"
+              class="mb-2 w-[140px]"
+            />
+          </div>
+          <h2 class="mb-3 text-highlight">UPLOAD</h2>
+          <h4 class="mb-3 rounded-full bg-primary px-7 py-2 text-white">
+            10/31 - 11/28
+          </h4>
+          <h5
+            class="inline-flex flex-col items-center justify-center text-secondary-dark lg:mb-5"
+          >
+            依賽程登錄作品
+            <em class="block not-italic text-highlight"
+              >額外競賽： 主題豐厚獎金等著你</em
+            >
+          </h5>
+          <div class="hidden h-[110px] w-8 lg:block">
+            <img
+              class="h-full w-full object-cover object-bottom"
+              src="@/assets/images/main/date_weekLine.png"
+              alt="date-weekline"
+            />
+          </div>
+        </div>
+        <div
+          id="date-line"
+          class="absolute bottom-[-80px] hidden h-[140px] lg:block"
+        >
+          <img
+            class="translate-x-[-30px]"
+            src="@/assets/images/main/date_line.png"
+            alt="date-line"
+          />
+        </div>
+      </div>
+    </section>
     <!-- <div
       id="character"
       class="fixed bottom-0 z-20 flex max-w-[inherit] items-center justify-center"
     >
       <img
         class="absolute bottom-0 -z-10"
-        src="./assets/images/main/road.png"
+        src="@/assets/images/main/road.png"
         alt="road"
       />
       <img
         class="w-[30%]"
-        src="./assets/images/character/character_f2e.gif"
+        src="@/assets/images/character/character_f2e.gif"
         alt="dog"
       />
       <img
         class="w-[30%]"
-        src="./assets/images/character/character_ui.gif"
+        src="@/assets/images/character/character_ui.gif"
         alt="cat"
       />
       <img
         class="w-[30%]"
-        src="./assets/images/character/character_team.gif"
+        src="@/assets/images/character/character_team.gif"
         alt="pig"
       />
     </div> -->

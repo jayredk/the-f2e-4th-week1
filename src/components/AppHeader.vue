@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed z-20 flex w-full items-center justify-between pt-2 lg:block lg:h-screen lg:max-w-[20px] lg:bg-[url('../assets/images/bg/bg_menuSide.png')] lg:pt-0"
+    class="fixed z-20 flex w-full items-center justify-between pt-2 lg:block lg:h-screen lg:max-w-[20px] lg:bg-[url('.@/assets/images/bg/bg_menuSide.png')] lg:pt-0"
   >
     <button
       class="max-w-[40px] lg:absolute lg:top-[50%] lg:left-[20px] lg:max-w-[60px]"
