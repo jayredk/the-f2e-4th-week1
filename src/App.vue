@@ -3,7 +3,7 @@ import AppHeader from "@/components/AppHeader.vue";
 </script>
 
 <template>
-  <div class="fixed inset-0 bg-secondary"></div>
+  <div class="fixed inset-0 -z-50 bg-secondary"></div>
   <AppHeader></AppHeader>
   <div id="index-bg">
     <img
@@ -582,6 +582,74 @@ import AppHeader from "@/components/AppHeader.vue";
             <li>以上皆提供完賽數位獎狀</li>
           </ul>
         </div>
+      </div>
+    </section>
+
+    <section id="bk7">
+      <h3
+        class="mb-3 w-full bg-[url('@/assets/images/bg/bg_talking_c.png')] bg-[length:100%_100%] bg-bottom bg-no-repeat pb-6 pt-3 text-center text-2xl font-bold text-primary lg:mb-16 lg:bg-[url('@/assets/images/bg/bg_talking.png')] lg:bg-[length:466px_151px] lg:px-16 lg:pt-6 lg:pb-16 lg:text-6xl"
+      >
+        贊助單位
+      </h3>
+
+      <ul class="container relative lg:flex lg:items-center lg:justify-between">
+        <li class="mb-10 flex flex-col items-center text-center">
+          <div
+            class="mb-4 flex h-[252px] w-[252px] items-center justify-center bg-[url('src/assets/images/btn/btn_sponsor.png')] bg-cover lg:h-[315px] lg:w-[315px]"
+          >
+            <img
+              src="./assets/images/main/logo_blockstudio.png"
+              alt="logo_blockstudio"
+              class="absolute z-10 w-[200px] rounded-[25%] lg:w-[250px]"
+            />
+          </div>
+          <span
+            class="rounded-full border border-secondary-dark py-1 px-5 text-secondary-dark"
+            >#版塊設計</span
+          >
+        </li>
+        <li class="mb-10 flex flex-col items-center text-center">
+          <div
+            class="mb-4 flex h-[252px] w-[252px] items-center justify-center bg-[url('src/assets/images/btn/btn_sponsor.png')] bg-cover lg:h-[315px] lg:w-[315px]"
+          >
+            <img
+              src="./assets/images/main/logo_titansoft.png"
+              alt="logo_titansoft"
+              class="absolute z-10 w-[200px] rounded-[25%] lg:w-[250px]"
+            />
+          </div>
+          <span
+            class="rounded-full border border-secondary-dark py-1 px-5 text-secondary-dark"
+            >#鈦坦科技</span
+          >
+        </li>
+        <li class="mb-10 flex flex-col items-center text-center">
+          <div
+            class="mb-4 flex h-[252px] w-[252px] items-center justify-center bg-[url('src/assets/images/btn/btn_sponsor.png')] bg-cover lg:h-[315px] lg:w-[315px]"
+          >
+            <img
+              src="./assets/images/main/logo_kdanmobile.png"
+              alt="logo_kdanmobile"
+              class="absolute z-10 w-[200px] rounded-[25%] lg:w-[250px]"
+            />
+          </div>
+          <span
+            class="rounded-full border border-secondary-dark py-1 px-5 text-secondary-dark"
+            >#凱鈿科技</span
+          >
+        </li>
+      </ul>
+      <div class="container hidden lg:block">
+        <img
+          class="absolute bottom-0 -left-[62px] -z-10 w-[331px]"
+          src="./assets/images/bg/bg_decorate_04.png"
+          alt="bg_decorate_04"
+        />
+        <img
+          class="absolute bottom-0 right-0 -z-10 w-[342px]"
+          src="./assets/images/bg/bg_decorate_08.png"
+          alt="bg_decorate_08"
+        />
       </div>
     </section>
     <!-- <div
