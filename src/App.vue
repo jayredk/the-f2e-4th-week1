@@ -592,7 +592,7 @@ import AppHeader from "@/components/AppHeader.vue";
         贊助單位
       </h3>
 
-      <ul class="container relative lg:flex lg:items-center lg:justify-between">
+      <ul class="container lg:flex lg:items-center lg:justify-between">
         <li class="mb-10 flex flex-col items-center text-center">
           <div
             class="mb-4 flex h-[252px] w-[252px] items-center justify-center bg-[url('src/assets/images/btn/btn_sponsor.png')] bg-cover lg:h-[315px] lg:w-[315px]"
@@ -639,7 +639,7 @@ import AppHeader from "@/components/AppHeader.vue";
           >
         </li>
       </ul>
-      <div class="container hidden lg:block">
+      <div class="container relative hidden lg:block">
         <img
           class="absolute bottom-0 -left-[62px] -z-10 w-[331px]"
           src="./assets/images/bg/bg_decorate_04.png"
@@ -650,6 +650,45 @@ import AppHeader from "@/components/AppHeader.vue";
           src="./assets/images/bg/bg_decorate_08.png"
           alt="bg_decorate_08"
         />
+      </div>
+    </section>
+
+    <section id="finished" class="hidden lg:block">
+      <div class="container relative">
+        <img src="./assets/images/main/finish.png" alt="finish" />
+        <div id="finisedLine">
+          <img
+            class="absolute bottom-[15%] -left-[47%]"
+            src="./assets/images/main/finishLine_l.png"
+            alt="finishLine_l"
+          />
+          <img
+            class="absolute bottom-[15%] -right-[50%]"
+            src="./assets/images/main/finishLine_r.png"
+            alt="finishLine_r"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="signup">
+      <div class="container">
+        <img
+          class="mx-auto mb-40 w-[226px] lg:mb-0 lg:w-[520px]"
+          src="./assets/images/logo/logo.png"
+          alt="logo"
+        />
+        <img
+          class="mx-auto w-[46px] lg:w-[84px]"
+          src="./assets/images/btn/btn_joinHand.gif"
+          alt="btn_joinHand"
+        />
+        <img
+          class="mx-auto mb-5 w-[88px] lg:w-[160px]"
+          src="./assets/images/btn/btn_join.png"
+          alt="btn_join"
+        />
+        <h2 class="text-center text-highlight">立即報名</h2>
       </div>
     </section>
     <!-- <div
