@@ -15,16 +15,17 @@ module.exports = {
     screens: {
       sm: "375px",
       md: "768px",
-      lg: "1120px",
-      // lg: "1440px",
+      // lg: "1120px",
+      lg: "1440px",
       xl: "1920px",
     },
     container: {
       center: true,
       screens: {
         sm: "349px",
-        md: "768px",
-        lg: "1175px",
+        // md: "768px",
+        // lg: "900px",
+        // lg: "1175px",
         // xl: "1175px",
       },
     },

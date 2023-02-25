@@ -1,5 +1,19 @@
 <script setup>
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { onMounted } from "vue";
 import AppHeader from "@/components/AppHeader.vue";
+
+gsap.registerPlugin(ScrollTrigger);
+
+onMounted(() => {
+  gsap.to("#cloud-1", {
+    scrollTrigger: {
+      trigger: "#participants",
+    },
+    // opacity: 0,
+  });
+});
 </script>
 
 <template>
@@ -7,68 +21,73 @@ import AppHeader from "@/components/AppHeader.vue";
   <AppHeader></AppHeader>
   <div id="index-bg">
     <img
-      class="hidden w-full w-[1430px] lg:absolute lg:block"
+      class="hidden w-[1430px] lg:absolute lg:block"
       src="@/assets/images/main/start.png"
       alt="start"
     />
     <img
-      class="absolute top-[45%] -left-5 w-[113px] md:w-[271px]"
+      id="cloud-1"
+      class="absolute top-[55%] -left-5 w-[113px] lg:top-[45%] lg:w-[271px]"
       src="@/assets/images/bg/bg_decorate_01.png"
       alt="bg_decorate_01"
     />
     <img
-      class="absolute top-[45%] -right-9 w-[127px] md:-right-[3rem] md:w-[305px]"
+      id="cloud-2"
+      class="absolute top-[55%] -right-9 w-[127px] lg:-right-[3rem] lg:top-[45%] lg:w-[305px]"
       src="@/assets/images/bg/bg_decorate_05.png"
       alt="bg_decorate_05"
     />
-    <div id="readyFrame" class="absolute top-[60%] right-0">
+    <div id="readyFrame" class="absolute top-[75%] right-0 lg:top-[55%]">
       <img
-        class="relative z-10 w-[120px] md:w-[275px]"
+        class="relative z-10 w-[120px] lg:w-[275px]"
         src="@/assets/images/main/ready_frame.png"
         alt="ready_frame"
       />
       <img
-        class="absolute top-[28%] left-[12%] w-[22px] md:w-[49px]"
+        class="absolute top-[28%] left-[12%] w-[22px] lg:w-[49px]"
         src="@/assets/images/main/ready_3.png"
         alt="ready_3"
       />
       <img
-        class="absolute left-[35%] top-[28%] w-[22px] md:w-[49px]"
+        class="absolute left-[35%] top-[28%] w-[22px] lg:w-[49px]"
         src="@/assets/images/main/ready_2.png"
         alt="ready_2"
       />
       <img
-        class="absolute top-[28%] left-[60%] w-[22px] md:w-[49px]"
+        class="absolute top-[28%] left-[60%] w-[22px] lg:w-[49px]"
         src="@/assets/images/main/ready_1.png"
         alt="ready_1"
       />
       <p
-        class="absolute -top-6 left-6 text-highlight md:left-16 md:-top-10 md:text-4xl"
+        class="absolute -top-6 left-6 text-highlight lg:left-16 lg:-top-10 lg:text-4xl"
       >
         READY?
       </p>
     </div>
   </div>
   <main class="relative">
-    <section id="index" class="container mb-20 pt-[91px] lg:pt-[268px]">
+    <section
+      id="index"
+      class="container mb-20 pt-[91px] lg:max-w-[900px] lg:pt-[268px] xl:max-w-[1175px]"
+    >
       <img
         class="mx-auto mb-3 w-[253px] lg:hidden"
         src="@/assets/images/logo/logo.png"
         alt="small logo"
       />
       <h1
-        class="mx-auto mb-6 w-[176px] rounded-[100px] bg-highlight py-1 text-center text-white md:w-[314px]"
+        class="mx-auto mb-6 w-[176px] rounded-[100px] bg-highlight py-1 text-center text-white lg:w-[314px]"
       >
         互動式網頁設計
       </h1>
       <div
         id="participants"
-        class="flex flex-col items-center text-primary lg:flex-row lg:justify-between"
+        class="flex flex-col text-primary lg:flex-row lg:items-start lg:justify-around"
       >
         <div class="mb-4 text-center">
           <h4 class="mb-2">前端工程師</h4>
           <div
-            class="mx-auto flex w-[100px] items-center justify-center rounded-[40px] bg-primary px-5 py-1 text-white md:w-[135px]"
+            class="mx-auto flex w-[100px] items-center justify-center rounded-[40px] bg-primary px-5 py-1 text-white lg:w-[135px]"
           >
             <svg
               class="mr-1 h-[1.5em] w-[1.25em] shrink-0"
@@ -112,13 +131,13 @@ import AppHeader from "@/components/AppHeader.vue";
                 </clipPath>
               </defs>
             </svg>
-            <span class="text-lg md:text-2xl">920</span>
+            <span class="text-lg lg:text-2xl">920</span>
           </div>
         </div>
         <div class="mb-4 text-center">
           <h4 class="mb-2">UI設計師</h4>
           <div
-            class="mx-auto flex w-[100px] items-center justify-center rounded-[40px] bg-primary px-5 py-1 text-white md:w-[135px]"
+            class="mx-auto flex w-[100px] items-center justify-center rounded-[40px] bg-primary px-5 py-1 text-white lg:w-[135px]"
           >
             <svg
               class="mr-1 h-[1.5em] w-[1.25em] shrink-0"
@@ -162,13 +181,13 @@ import AppHeader from "@/components/AppHeader.vue";
                 </clipPath>
               </defs>
             </svg>
-            <span class="text-lg md:text-2xl">110</span>
+            <span class="text-lg lg:text-2xl">110</span>
           </div>
         </div>
         <div class="text-center">
           <h4 class="mb-2">團體組</h4>
           <div
-            class="mx-auto flex w-[100px] items-center justify-center rounded-[40px] bg-primary px-5 py-1 text-white md:w-[135px]"
+            class="mx-auto flex w-[100px] items-center justify-center rounded-[40px] bg-primary px-5 py-1 text-white lg:w-[135px]"
           >
             <svg
               class="mr-1 h-[1.5em] w-[1.25em] shrink-0"
@@ -212,7 +231,7 @@ import AppHeader from "@/components/AppHeader.vue";
                 </clipPath>
               </defs>
             </svg>
-            <span class="text-lg md:text-2xl">41</span>
+            <span class="text-lg lg:text-2xl">41</span>
           </div>
         </div>
       </div>
@@ -225,8 +244,10 @@ import AppHeader from "@/components/AppHeader.vue";
         你是否也有以下困擾？
       </h3>
 
-      <div class="container mb-16 text-center md:flex">
-        <div class="md:mx-2">
+      <div
+        class="container mb-16 text-center lg:flex lg:max-w-[900px] xl:max-w-[1175px]"
+      >
+        <div class="lg:mx-2">
           <h4 class="text-highlight">羨慕別人的酷酷網頁動畫？</h4>
           <picture>
             <source
@@ -236,11 +257,11 @@ import AppHeader from "@/components/AppHeader.vue";
             <img src="@/assets/images/main/question_1_m.png" alt="Q1-m" />
           </picture>
         </div>
-        <div class="md:mx-2">
+        <div class="lg:mx-2">
           <h4 class="text-highlight">滿足不了同事的許願？</h4>
           <img src="@/assets/images/main/question_2.png" alt="Q2" />
         </div>
-        <div class="md:mx-2">
+        <div class="lg:mx-2">
           <h4 class="text-highlight">動畫技能樹太雜無從下手？</h4>
           <picture>
             <source
@@ -264,7 +285,7 @@ import AppHeader from "@/components/AppHeader.vue";
       </h5>
 
       <div
-        class="container text-xl text-primary md:text-4xl lg:flex lg:justify-between"
+        class="container text-xl text-primary lg:flex lg:max-w-[900px] lg:justify-between lg:text-4xl xl:max-w-[1175px]"
       >
         <div
           class="mb-20 flex flex-row-reverse items-center justify-between lg:block lg:w-[250px]"
@@ -283,7 +304,7 @@ import AppHeader from "@/components/AppHeader.vue";
             <h4>前端工程師</h4>
           </div>
           <img
-            class="w-[157px] md:w-[228px] lg:hidden"
+            class="w-[157px] lg:hidden lg:w-[228px]"
             src="@/assets/images/character/character_f2e.png"
             alt="character_f2e"
           />
@@ -305,7 +326,7 @@ import AppHeader from "@/components/AppHeader.vue";
             <h4>ＵＩ設計師</h4>
           </div>
           <img
-            class="w-[157px] md:w-[228px] lg:hidden"
+            class="w-[157px] lg:hidden lg:w-[228px]"
             src="@/assets/images/character/character_ui.png"
             alt="character_ui"
           />
@@ -327,7 +348,7 @@ import AppHeader from "@/components/AppHeader.vue";
             <h4>團體組(UI+前端)</h4>
           </div>
           <img
-            class="w-[157px] md:w-[228px] lg:hidden"
+            class="w-[157px] lg:hidden lg:w-[228px]"
             src="@/assets/images/character/character_team.png"
             alt="character_team"
           />
@@ -344,7 +365,9 @@ import AppHeader from "@/components/AppHeader.vue";
       <h5 class="mb-10 text-center text-xl text-secondary-dark lg:mb-24">
         各路廠商強強聯手<br />共同設計出接地氣的網頁互動挑戰關卡
       </h5>
-      <div class="container mb-16 text-center lg:text-left">
+      <div
+        class="container mb-16 text-center lg:max-w-[900px] lg:text-left xl:max-w-[1175px]"
+      >
         <div class="mb-10 lg:flex lg:max-w-[820px] lg:items-start">
           <img
             class="mx-auto w-[200px] lg:mr-10 lg:ml-0 lg:w-[280px]"
@@ -437,7 +460,9 @@ import AppHeader from "@/components/AppHeader.vue";
       >
         重要時程
       </h3>
-      <div class="container relative lg:flex lg:items-start lg:justify-between">
+      <div
+        class="container relative lg:flex lg:max-w-[900px] lg:items-start lg:justify-between xl:max-w-[1175px]"
+      >
         <div class="mb-20 flex flex-col items-center justify-center lg:mb-0">
           <div class="flex h-[160px] flex-col items-center justify-center">
             <img
@@ -528,7 +553,10 @@ import AppHeader from "@/components/AppHeader.vue";
       </div>
     </section>
 
-    <section id="bk6-1" class="container relative text-center">
+    <section
+      id="bk6-1"
+      class="container relative text-center lg:max-w-[900px] xl:max-w-[1175px]"
+    >
       <h2 class="text-highlight">
         區區修煉<br class="lg:hidden" />已經無法滿足了嗎？
       </h2>
@@ -551,7 +579,9 @@ import AppHeader from "@/components/AppHeader.vue";
         還有比賽等著你！
       </h3>
 
-      <div class="container lg:flex lg:justify-between">
+      <div
+        class="container lg:flex lg:max-w-[900px] lg:justify-between xl:max-w-[1175px]"
+      >
         <img
           class="mx-auto w-[335px] lg:m-0 lg:w-[375px]"
           src="./assets/images/main/award.png"
@@ -592,7 +622,9 @@ import AppHeader from "@/components/AppHeader.vue";
         贊助單位
       </h3>
 
-      <ul class="container lg:flex lg:items-center lg:justify-between">
+      <ul
+        class="container lg:flex lg:max-w-[900px] lg:items-center lg:justify-between xl:max-w-[1175px]"
+      >
         <li class="mb-10 flex flex-col items-center text-center">
           <div
             class="mb-4 flex h-[252px] w-[252px] items-center justify-center bg-[url('src/assets/images/btn/btn_sponsor.png')] bg-cover lg:h-[315px] lg:w-[315px]"
@@ -600,7 +632,7 @@ import AppHeader from "@/components/AppHeader.vue";
             <img
               src="./assets/images/main/logo_blockstudio.png"
               alt="logo_blockstudio"
-              class="absolute z-10 w-[200px] rounded-[25%] lg:w-[250px]"
+              class="absolute z-0 w-[200px] rounded-[25%] lg:w-[250px]"
             />
           </div>
           <span
@@ -615,7 +647,7 @@ import AppHeader from "@/components/AppHeader.vue";
             <img
               src="./assets/images/main/logo_titansoft.png"
               alt="logo_titansoft"
-              class="absolute z-10 w-[200px] rounded-[25%] lg:w-[250px]"
+              class="absolute z-0 w-[200px] rounded-[25%] lg:w-[250px]"
             />
           </div>
           <span
@@ -630,7 +662,7 @@ import AppHeader from "@/components/AppHeader.vue";
             <img
               src="./assets/images/main/logo_kdanmobile.png"
               alt="logo_kdanmobile"
-              class="absolute z-10 w-[200px] rounded-[25%] lg:w-[250px]"
+              class="absolute z-0 w-[200px] rounded-[25%] lg:w-[250px]"
             />
           </div>
           <span
@@ -639,7 +671,9 @@ import AppHeader from "@/components/AppHeader.vue";
           >
         </li>
       </ul>
-      <div class="container relative hidden lg:block">
+      <div
+        class="container relative hidden lg:block lg:max-w-[900px] xl:max-w-[1175px]"
+      >
         <img
           class="absolute bottom-0 -left-[62px] -z-10 w-[331px]"
           src="./assets/images/bg/bg_decorate_04.png"
@@ -654,7 +688,7 @@ import AppHeader from "@/components/AppHeader.vue";
     </section>
 
     <section id="finished" class="hidden lg:block">
-      <div class="container relative">
+      <div class="container relative lg:max-w-[900px] xl:max-w-[1175px]">
         <img src="./assets/images/main/finish.png" alt="finish" />
         <div id="finisedLine">
           <img
@@ -691,9 +725,9 @@ import AppHeader from "@/components/AppHeader.vue";
         <h2 class="text-center text-highlight">立即報名</h2>
       </div>
     </section>
-    <!-- <div
+    <div
       id="character"
-      class="fixed bottom-0 z-20 flex max-w-[inherit] items-center justify-center"
+      class="container fixed bottom-0 left-0 right-0 z-20 flex items-center justify-center lg:max-w-[900px] xl:max-w-[1175px]"
     >
       <img
         class="absolute bottom-0 -z-10"
@@ -715,7 +749,7 @@ import AppHeader from "@/components/AppHeader.vue";
         src="@/assets/images/character/character_team.gif"
         alt="pig"
       />
-    </div> -->
+    </div>
   </main>
 </template>
 
