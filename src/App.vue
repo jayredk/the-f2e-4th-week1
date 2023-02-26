@@ -1,18 +1,121 @@
 <script setup>
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { TextPlugin } from "gsap/TextPlugin";
 import { onMounted } from "vue";
 import AppHeader from "@/components/AppHeader.vue";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 onMounted(() => {
-  gsap.to("#cloud-1", {
-    scrollTrigger: {
-      trigger: "#participants",
-    },
-    // opacity: 0,
+  const tl = gsap.timeline();
+
+  // frame 1
+  tl.to("#cloud-1", {
+    x: 100,
+    scale: 0.8,
   });
+  tl.to(
+    "#cloud-2",
+    {
+      x: -100,
+      scale: 0.8,
+    },
+    "-=0.5"
+  );
+  tl.to(
+    ["#signal-text", "#signal-yellow", "#signal-green"],
+    {
+      opacity: 0,
+    },
+    "-=0.5"
+  );
+  // frame 2
+  tl.to("#cloud-1", {
+    x: 200,
+    scale: 0.7,
+  });
+  tl.to(
+    "#cloud-2",
+    {
+      x: -200,
+      scale: 0.7,
+    },
+    "-=0.5"
+  );
+  tl.to(
+    "#signal-red",
+    {
+      opacity: 0,
+    },
+    "-=0.5"
+  );
+  tl.to(
+    "#signal-yellow",
+    {
+      opacity: 1,
+    },
+    "-=0.5"
+  );
+  // frame 3
+  tl.to("#cloud-1", {
+    x: 300,
+    scale: 0,
+    opacity: 0,
+  });
+  tl.to(
+    "#cloud-2",
+    {
+      x: -300,
+      scale: 0,
+      opacity: 0,
+    },
+    "-=0.5"
+  );
+  tl.to(
+    "#signal-yellow",
+    {
+      opacity: 0,
+    },
+    "-=0.5"
+  );
+  tl.to(
+    "#signal-green",
+    {
+      opacity: 1,
+    },
+    "-=0.5"
+  );
+  tl.set(
+    "#signal-text",
+    {
+      text: "GO!!",
+      left: "5rem",
+    },
+    "-=0.5"
+  );
+  tl.to(
+    "#signal-text",
+    {
+      opacity: 1,
+    },
+    "-=0.5"
+  );
+  // frame 4
+  tl.to("#readyFrame, #participants", {
+    opacity: 0,
+  });
+  // frame 5
+  tl.to("#startLine, h1, #logo", {
+    opacity: 0,
+  });
+  tl.to(
+    "#logo-sm",
+    {
+      display: "block",
+    },
+    "-=0.5"
+  );
 });
 </script>
 
@@ -21,6 +124,7 @@ onMounted(() => {
   <AppHeader></AppHeader>
   <div id="index-bg">
     <img
+      id="startLine"
       class="hidden w-[1430px] lg:absolute lg:block"
       src="@/assets/images/main/start.png"
       alt="start"
@@ -44,21 +148,25 @@ onMounted(() => {
         alt="ready_frame"
       />
       <img
+        id="signal-red"
         class="absolute top-[28%] left-[12%] w-[22px] lg:w-[49px]"
         src="@/assets/images/main/ready_3.png"
         alt="ready_3"
       />
       <img
+        id="signal-yellow"
         class="absolute left-[35%] top-[28%] w-[22px] lg:w-[49px]"
         src="@/assets/images/main/ready_2.png"
         alt="ready_2"
       />
       <img
+        id="signal-green"
         class="absolute top-[28%] left-[60%] w-[22px] lg:w-[49px]"
         src="@/assets/images/main/ready_1.png"
         alt="ready_1"
       />
       <p
+        id="signal-text"
         class="absolute -top-6 left-6 text-highlight lg:left-16 lg:-top-10 lg:text-4xl"
       >
         READY?
@@ -68,10 +176,11 @@ onMounted(() => {
   <main class="relative">
     <section
       id="index"
-      class="container mb-20 pt-[91px] lg:max-w-[900px] lg:pt-[268px] xl:max-w-[1175px]"
+      class="container mb-20 h-screen pt-[91px] lg:max-w-[900px] lg:pt-[268px] xl:max-w-[1175px]"
     >
       <img
-        class="mx-auto mb-3 w-[253px] lg:hidden"
+        id="logo-sm"
+        class="mx-auto mb-3 w-[253px] lg:fixed lg:top-[30px] lg:left-[40px] lg:hidden lg:w-[200px]"
         src="@/assets/images/logo/logo.png"
         alt="small logo"
       />

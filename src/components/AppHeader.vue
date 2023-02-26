@@ -1,6 +1,7 @@
 <template>
   <div class="fixed z-10 h-[60px] w-full bg-secondary lg:bg-transparent">
     <div
+      id="panel"
       class="fixed z-10 max-w-[155px] -translate-x-[155px] lg:h-screen lg:-translate-x-[135px] lg:bg-[url('@/assets/images/bg/bg_menuSide.png')] lg:bg-right lg:bg-no-repeat lg:pt-0"
     >
       <!-- TODO： 把 navbar 拆出來 -->
@@ -48,6 +49,7 @@
     </div>
 
     <img
+      id="logo"
       class="fixed left-0 right-0 z-10 mx-auto w-[133px] pt-2 lg:top-[44px] lg:w-[680px] lg:pt-0"
       src="@/assets/images/logo/logo_text.png"
       alt="logo"
