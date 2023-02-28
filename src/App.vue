@@ -1,12 +1,13 @@
 <script setup>
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { TextPlugin } from "gsap/TextPlugin";
 import { onMounted } from "vue";
 import AppHeader from "@/components/AppHeader.vue";
+import AppSignals from "@/components/AppSignals.vue";
+import AppHome from "@/components/AppHome.vue";
 import animation from "./animation";
 
-gsap.registerPlugin(ScrollTrigger, TextPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
   const { animationDesktop } = animation;
@@ -21,7 +22,7 @@ onMounted(() => {
 <template>
   <div class="fixed inset-0 -z-50 bg-secondary"></div>
   <AppHeader></AppHeader>
-  <div id="index-bg">
+  <div id="home-bg">
     <img
       id="startLine"
       class="hidden w-[1430px] lg:absolute lg:block"
@@ -40,212 +41,12 @@ onMounted(() => {
       src="@/assets/images/bg/bg_decorate_05.png"
       alt="bg_decorate_05"
     />
-    <div id="readyFrame" class="absolute top-[75%] right-0 lg:top-[55%]">
-      <img
-        class="relative z-10 w-[120px] lg:w-[275px]"
-        src="@/assets/images/main/ready_frame.png"
-        alt="ready_frame"
-      />
-      <img
-        id="signal-red"
-        class="absolute top-[28%] left-[12%] w-[22px] lg:w-[49px]"
-        src="@/assets/images/main/ready_3.png"
-        alt="ready_3"
-      />
-      <img
-        id="signal-yellow"
-        class="absolute left-[35%] top-[28%] w-[22px] lg:w-[49px]"
-        src="@/assets/images/main/ready_2.png"
-        alt="ready_2"
-      />
-      <img
-        id="signal-green"
-        class="absolute top-[28%] left-[60%] w-[22px] lg:w-[49px]"
-        src="@/assets/images/main/ready_1.png"
-        alt="ready_1"
-      />
-      <p
-        id="signal-text"
-        class="absolute -top-6 left-6 text-highlight lg:left-16 lg:-top-10 lg:text-4xl"
-      >
-        READY?
-      </p>
-    </div>
+    <AppSignals />
   </div>
   <main class="relative">
-    <section
-      id="index"
-      class="container mb-20 h-screen pt-[91px] lg:max-w-[900px] lg:pt-[268px] xl:max-w-[1175px]"
-    >
-      <img
-        id="logo-sm"
-        class="mx-auto mb-3 w-[253px] lg:fixed lg:top-[30px] lg:left-[40px] lg:hidden lg:w-[200px]"
-        src="@/assets/images/logo/logo.png"
-        alt="small logo"
-      />
-      <h1
-        class="mx-auto mb-6 w-[176px] rounded-[100px] bg-highlight py-1 text-center text-white lg:w-[314px]"
-      >
-        互動式網頁設計
-      </h1>
-      <div
-        id="participants"
-        class="flex flex-col text-primary lg:flex-row lg:items-start lg:justify-around"
-      >
-        <div class="mb-4 text-center">
-          <h4 class="mb-2">前端工程師</h4>
-          <div
-            class="mx-auto flex w-[100px] items-center justify-center rounded-[40px] bg-primary px-5 py-1 text-white lg:w-[135px]"
-          >
-            <svg
-              class="mr-1 h-[1.5em] w-[1.25em] shrink-0"
-              viewBox="0 0 40 40"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_8_71)">
-                <path
-                  d="M15 18.3333C18.6819 18.3333 21.6667 15.3486 21.6667 11.6667C21.6667 7.98477 18.6819 5 15 5C11.3181 5 8.33337 7.98477 8.33337 11.6667C8.33337 15.3486 11.3181 18.3333 15 18.3333Z"
-                  stroke="white"
-                  stroke-width="5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M5 35V31.6667C5 29.8986 5.70238 28.2029 6.95262 26.9526C8.20286 25.7024 9.89856 25 11.6667 25H18.3333C20.1014 25 21.7971 25.7024 23.0474 26.9526C24.2976 28.2029 25 29.8986 25 31.6667V35"
-                  stroke="white"
-                  stroke-width="5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M28.2556 17.4999C29.0353 17.0659 29.7251 16.4769 30.2794 15.7628C31.1871 14.5934 31.6798 13.1552 31.6798 11.675C31.6798 10.1947 31.1871 8.75649 30.2794 7.58714C29.552 6.64996 28.5911 5.92819 27.5 5.4895"
-                  stroke="white"
-                  stroke-width="5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M35 35V31.6667C34.9915 30.1953 34.4965 28.768 33.5921 27.6073C32.6877 26.4467 31.4247 25.6178 30 25.25"
-                  stroke="white"
-                  stroke-width="5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_8_71">
-                  <rect width="40" height="40" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-            <span class="text-lg lg:text-2xl">920</span>
-          </div>
-        </div>
-        <div class="mb-4 text-center">
-          <h4 class="mb-2">UI設計師</h4>
-          <div
-            class="mx-auto flex w-[100px] items-center justify-center rounded-[40px] bg-primary px-5 py-1 text-white lg:w-[135px]"
-          >
-            <svg
-              class="mr-1 h-[1.5em] w-[1.25em] shrink-0"
-              viewBox="0 0 40 40"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_8_71)">
-                <path
-                  d="M15 18.3333C18.6819 18.3333 21.6667 15.3486 21.6667 11.6667C21.6667 7.98477 18.6819 5 15 5C11.3181 5 8.33337 7.98477 8.33337 11.6667C8.33337 15.3486 11.3181 18.3333 15 18.3333Z"
-                  stroke="white"
-                  stroke-width="5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M5 35V31.6667C5 29.8986 5.70238 28.2029 6.95262 26.9526C8.20286 25.7024 9.89856 25 11.6667 25H18.3333C20.1014 25 21.7971 25.7024 23.0474 26.9526C24.2976 28.2029 25 29.8986 25 31.6667V35"
-                  stroke="white"
-                  stroke-width="5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M28.2556 17.4999C29.0353 17.0659 29.7251 16.4769 30.2794 15.7628C31.1871 14.5934 31.6798 13.1552 31.6798 11.675C31.6798 10.1947 31.1871 8.75649 30.2794 7.58714C29.552 6.64996 28.5911 5.92819 27.5 5.4895"
-                  stroke="white"
-                  stroke-width="5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M35 35V31.6667C34.9915 30.1953 34.4965 28.768 33.5921 27.6073C32.6877 26.4467 31.4247 25.6178 30 25.25"
-                  stroke="white"
-                  stroke-width="5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_8_71">
-                  <rect width="40" height="40" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-            <span class="text-lg lg:text-2xl">110</span>
-          </div>
-        </div>
-        <div class="text-center">
-          <h4 class="mb-2">團體組</h4>
-          <div
-            class="mx-auto flex w-[100px] items-center justify-center rounded-[40px] bg-primary px-5 py-1 text-white lg:w-[135px]"
-          >
-            <svg
-              class="mr-1 h-[1.5em] w-[1.25em] shrink-0"
-              viewBox="0 0 40 40"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_8_71)">
-                <path
-                  d="M15 18.3333C18.6819 18.3333 21.6667 15.3486 21.6667 11.6667C21.6667 7.98477 18.6819 5 15 5C11.3181 5 8.33337 7.98477 8.33337 11.6667C8.33337 15.3486 11.3181 18.3333 15 18.3333Z"
-                  stroke="white"
-                  stroke-width="5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M5 35V31.6667C5 29.8986 5.70238 28.2029 6.95262 26.9526C8.20286 25.7024 9.89856 25 11.6667 25H18.3333C20.1014 25 21.7971 25.7024 23.0474 26.9526C24.2976 28.2029 25 29.8986 25 31.6667V35"
-                  stroke="white"
-                  stroke-width="5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M28.2556 17.4999C29.0353 17.0659 29.7251 16.4769 30.2794 15.7628C31.1871 14.5934 31.6798 13.1552 31.6798 11.675C31.6798 10.1947 31.1871 8.75649 30.2794 7.58714C29.552 6.64996 28.5911 5.92819 27.5 5.4895"
-                  stroke="white"
-                  stroke-width="5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M35 35V31.6667C34.9915 30.1953 34.4965 28.768 33.5921 27.6073C32.6877 26.4467 31.4247 25.6178 30 25.25"
-                  stroke="white"
-                  stroke-width="5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_8_71">
-                  <rect width="40" height="40" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-            <span class="text-lg lg:text-2xl">41</span>
-          </div>
-        </div>
-      </div>
-    </section>
+    <AppHome />
 
-    <section id="bk2">
+    <section id="question">
       <h3
         class="mb-3 w-full bg-[url('@/assets/images/bg/bg_talking_c.png')] bg-[length:100%_100%] bg-bottom bg-no-repeat pb-6 pt-3 text-center text-2xl font-bold text-primary lg:mb-16 lg:bg-[url('@/assets/images/bg/bg_talking.png')] lg:bg-[length:736px_151px] lg:pt-6 lg:pb-16 lg:text-6xl"
       >

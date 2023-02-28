@@ -1,4 +1,7 @@
 import { gsap } from "gsap";
+import { TextPlugin } from "gsap/TextPlugin";
+
+gsap.registerPlugin(TextPlugin);
 
 function moveClouds(x, scale) {
   const tl = gsap
@@ -105,7 +108,7 @@ export default function animationDesktop() {
   master.add(showGreenSignal(), "-=0.5");
 
   // frame 4
-  master.add(hideTarget("#readyFrame, #participants"));
+  master.add(hideTarget("#signals, #participants"));
 
   // frame 5
   master.add(hideTarget("#startLine, h1, #logo"));
