@@ -4,118 +4,17 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
 import { onMounted } from "vue";
 import AppHeader from "@/components/AppHeader.vue";
+import animation from "./animation";
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 onMounted(() => {
-  const tl = gsap.timeline();
+  const { animationDesktop } = animation;
+  const mm = gsap.matchMedia();
 
-  // frame 1
-  tl.to("#cloud-1", {
-    x: 100,
-    scale: 0.8,
+  mm.add("(min-width: 1440px)", () => {
+    animationDesktop();
   });
-  tl.to(
-    "#cloud-2",
-    {
-      x: -100,
-      scale: 0.8,
-    },
-    "-=0.5"
-  );
-  tl.to(
-    ["#signal-text", "#signal-yellow", "#signal-green"],
-    {
-      opacity: 0,
-    },
-    "-=0.5"
-  );
-  // frame 2
-  tl.to("#cloud-1", {
-    x: 200,
-    scale: 0.7,
-  });
-  tl.to(
-    "#cloud-2",
-    {
-      x: -200,
-      scale: 0.7,
-    },
-    "-=0.5"
-  );
-  tl.to(
-    "#signal-red",
-    {
-      opacity: 0,
-    },
-    "-=0.5"
-  );
-  tl.to(
-    "#signal-yellow",
-    {
-      opacity: 1,
-    },
-    "-=0.5"
-  );
-  // frame 3
-  tl.to("#cloud-1", {
-    x: 300,
-    scale: 0,
-    opacity: 0,
-  });
-  tl.to(
-    "#cloud-2",
-    {
-      x: -300,
-      scale: 0,
-      opacity: 0,
-    },
-    "-=0.5"
-  );
-  tl.to(
-    "#signal-yellow",
-    {
-      opacity: 0,
-    },
-    "-=0.5"
-  );
-  tl.to(
-    "#signal-green",
-    {
-      opacity: 1,
-    },
-    "-=0.5"
-  );
-  tl.set(
-    "#signal-text",
-    {
-      text: "GO!!",
-      left: "5rem",
-    },
-    "-=0.5"
-  );
-  tl.to(
-    "#signal-text",
-    {
-      opacity: 1,
-    },
-    "-=0.5"
-  );
-  // frame 4
-  tl.to("#readyFrame, #participants", {
-    opacity: 0,
-  });
-  // frame 5
-  tl.to("#startLine, h1, #logo", {
-    opacity: 0,
-  });
-  tl.to(
-    "#logo-sm",
-    {
-      display: "block",
-    },
-    "-=0.5"
-  );
 });
 </script>
 
