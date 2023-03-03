@@ -11,15 +11,12 @@
   html {
     font-family: GenJyuuGothicP, sans-serif;
     //font-family: 'Noto Sans TC', sans-serif;
-    height: 100%;
   }
   body {
-    @apply font-medium tracking-wider lg:text-lg lg:tracking-wide h-full cursor-main;
+    @apply font-medium tracking-wider lg:text-lg lg:tracking-wide overflow-x-hidden cursor-main;
   }
   #app {
     position: relative;
-    overflow-x: hidden;
-    height: 100%;
   }
   h1 {
     @apply font-bold text-xl leading-6 tracking-wider lg:text-4xl lg:leading-tight lg:tracking-wide;
