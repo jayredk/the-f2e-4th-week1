@@ -105,8 +105,7 @@ export default function animationDesktop() {
   const home = gsap.timeline({
     scrollTrigger: {
       trigger: "#home",
-      start: "top top",
-      end: "bottom+=300 top",
+      end: "bottom+=500 top",
       pin: true,
       scrub: 3,
       markers: true,
@@ -136,10 +135,9 @@ export default function animationDesktop() {
   const question = gsap.timeline({
     scrollTrigger: {
       trigger: "#question",
-      start: "top-=500 top",
-      end: "bottom-=300 top",
       markers: true,
       scrub: 3,
+      pin: true,
     },
   });
   // Question
@@ -150,10 +148,10 @@ export default function animationDesktop() {
       .set(["#question h3", "#question .block"], {
         opacity: 0,
       })
-      .set(".block:nth-child(1)", {
+      .set("#question .block:nth-child(1)", {
         translateX: -100,
       })
-      .set(".block:nth-child(3)", {
+      .set("#question .block:nth-child(3)", {
         translateX: 100,
       })
       .to("#question h3", {
@@ -186,7 +184,7 @@ export default function animationDesktop() {
   question.add(
     gsap
       .timeline()
-      .to(".block:nth-child(1)", {
+      .to("#question .block:nth-child(1)", {
         opacity: 1,
         translateX: 0,
       })
@@ -215,7 +213,7 @@ export default function animationDesktop() {
   question.add(
     gsap
       .timeline()
-      .to(".block:nth-child(2)", {
+      .to("#question .block:nth-child(2)", {
         opacity: 1,
       })
       .to(
@@ -244,7 +242,7 @@ export default function animationDesktop() {
   question.add(
     gsap
       .timeline()
-      .to(".block:nth-child(3)", {
+      .to("#question .block:nth-child(3)", {
         opacity: 1,
         translateX: 0,
       })
@@ -268,12 +266,20 @@ export default function animationDesktop() {
       )
   );
 
+  // frame 5
+  question.add(hideTarget("#question"));
+  question.add(
+    gsap.timeline().to("#character", {
+      scale: 1,
+    }),
+    "-=0.5"
+  );
+
   const role = gsap.timeline({
     scrollTrigger: {
       trigger: "#role",
-      start: "top-=300 top",
-      end: "bottom-=800 top",
       scrub: 3,
+      pin: true,
       markers: true,
     },
   });
@@ -287,9 +293,6 @@ export default function animationDesktop() {
       })
       .set("#role .container", {
         translateY: 30,
-      })
-      .to("#character", {
-        scale: 1,
       })
   );
 
@@ -319,9 +322,104 @@ export default function animationDesktop() {
     "-=0.5"
   );
 
+  const theme = gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: "#theme",
+        // start: "top-=300 top",
+        // end: "bottom-=800 top",
+        scrub: 3,
+        pin: true,
+        markers: true,
+      },
+    })
+    .set("#theme h3, #theme h5, #theme .block", {
+      opacity: 0,
+    })
+    .set("#theme .block", {
+      translateY: 200,
+    });
+  // frame 1
+  theme.add(
+    gsap
+      .timeline()
+      .to("#character", {
+        scale: 0.4,
+      })
+      .to(
+        "#theme h3, #theme h5",
+        {
+          opacity: 1,
+        },
+        "-=0.5"
+      )
+  );
+
+  // frame 2
+  theme.add(
+    gsap.timeline().to("#theme .block:nth-child(1)", {
+      opacity: 1,
+      translateY: 0,
+    })
+  );
+
+  // frame 3
+  theme.add(
+    gsap
+      .timeline()
+      .to("#theme .block:nth-child(1)", {
+        opacity: 0,
+        translateY: -500,
+      })
+      .to(
+        "#theme .block:nth-child(2)",
+        {
+          opacity: 1,
+          translateY: -300,
+        },
+        "-=0.5"
+      )
+  );
+
+  // frame 4
+  theme.add(
+    gsap
+      .timeline()
+      .to("#theme .block:nth-child(2)", {
+        opacity: 0,
+        translateY: -800,
+      })
+      .to(
+        "#theme .block:nth-child(3)",
+        {
+          opacity: 1,
+          translateY: -600,
+        },
+        "-=0.5"
+      )
+  );
+
+  // frame 5
+  theme.add(
+    gsap.timeline().to("#theme .block:nth-child(3)", {
+      opacity: 0,
+      translateY: -1000,
+    })
+  );
+
+  // frame 6
+  theme.add(hideTarget("#theme h3, #theme h5"));
+  theme.add(
+    gsap.timeline().to("#character", {
+      scale: 0.75,
+    }),
+    "-=0.5"
+  );
+
   // 沒什麼作用，調用函式的當下就會執行 gsap
   master.add(home);
   master.add(question);
   master.add(role);
+  master.add(theme);
   return master;
 }

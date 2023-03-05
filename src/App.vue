@@ -6,6 +6,7 @@ import AppSignals from "@/components/AppSignals.vue";
 import AppHome from "@/components/AppHome.vue";
 import AppQuestion from "@/components/AppQuestion.vue";
 import AppRole from "@/components/AppRole.vue";
+import AppTheme from "@/components/AppTheme.vue";
 import animation from "./animation";
 
 onMounted(() => {
@@ -55,105 +56,9 @@ onMounted(() => {
 
     <AppRole />
 
-    <!-- <section id="bk4">
-      <h3
-        class="mb-3 w-full bg-[url('@/assets/images/bg/bg_talking_c.png')] bg-[length:100%_100%] bg-bottom bg-no-repeat pb-6 pt-3 text-center text-2xl font-bold text-primary lg:bg-[url('@/assets/images/bg/bg_talking.png')] lg:bg-[length:940px_151px] lg:px-16 lg:pt-6 lg:pb-16 lg:text-6xl"
-      >
-        年度最強合作，三大主題來襲
-      </h3>
-      <h5 class="mb-10 text-center text-xl text-secondary-dark lg:mb-24">
-        各路廠商強強聯手<br />共同設計出接地氣的網頁互動挑戰關卡
-      </h5>
-      <div
-        class="container mb-16 text-center lg:max-w-[900px] lg:text-left xl:max-w-[1175px]"
-      >
-        <div class="mb-10 lg:flex lg:max-w-[820px] lg:items-start">
-          <img
-            class="mx-auto w-[200px] lg:mr-10 lg:ml-0 lg:w-[280px]"
-            src="@/assets/images/main/week_1.png"
-            alt="week1"
-          />
-          <div class="flex flex-col items-center lg:block">
-            <h2 class="mb-2 text-highlight">WEEK 1</h2>
-            <h3 class="mb-2 text-primary lg:mb-5">The F2E 活動網站設計</h3>
-            <p
-              class="mb-4 inline-block rounded-full border border-secondary-dark px-6 text-lg text-secondary-dark lg:mr-2"
-            >
-              Parallax Scrolling
-            </p>
-            <p
-              class="mb-4 inline-block rounded-full border border-secondary-dark px-6 text-lg text-secondary-dark"
-            >
-              #版塊設計
-            </p>
-            <button
-              type="button"
-              class="mx-auto block rounded-full bg-secondary-dark px-6 py-2 text-white lg:m-0"
-            >
-              查看關卡細節
-            </button>
-          </div>
-        </div>
-        <div
-          class="mb-10 lg:ml-auto lg:flex lg:max-w-[820px] lg:flex-row-reverse"
-        >
-          <img
-            class="mx-auto w-[200px] lg:ml-10 lg:mr-0 lg:w-[280px]"
-            src="@/assets/images/main/week_2.png"
-            alt="week2"
-          />
-          <div class="flex flex-col items-center lg:block lg:text-right">
-            <h2 class="mb-2 text-highlight">WEEK 2</h2>
-            <h3 class="mb-2 text-primary lg:mb-5">今晚，我想來點點簽</h3>
-            <p
-              class="mb-4 inline-block w-fit rounded-full border border-secondary-dark px-6 text-lg text-secondary-dark lg:mr-2"
-            >
-              Canvas
-            </p>
-            <p
-              class="mb-4 inline-block rounded-full border border-secondary-dark px-6 text-lg text-secondary-dark"
-            >
-              #凱鈿行動科技
-            </p>
-            <button
-              type="button"
-              class="mx-auto block rounded-full bg-secondary-dark px-6 py-2 text-white lg:mr-0"
-            >
-              查看關卡細節
-            </button>
-          </div>
-        </div>
-        <div class="lg:flex lg:max-w-[820px] lg:items-start">
-          <img
-            class="mx-auto w-[200px] lg:mr-10 lg:ml-0 lg:w-[280px]"
-            src="@/assets/images/main/week_3.png"
-            alt="week3"
-          />
-          <div class="flex flex-col items-center lg:block">
-            <h2 class="mb-2 text-highlight">WEEK 3</h2>
-            <h3 class="mb-2 text-primary lg:mb-5">Scrum 新手村</h3>
-            <p
-              class="mb-4 inline-block rounded-full border border-secondary-dark px-6 text-lg text-secondary-dark lg:mr-2"
-            >
-              JS draggable
-            </p>
-            <p
-              class="mb-4 inline-block rounded-full border border-secondary-dark px-6 text-lg text-secondary-dark"
-            >
-              #鈦坦科技
-            </p>
-            <button
-              type="button"
-              class="mx-auto block rounded-full bg-secondary-dark px-6 py-2 text-white lg:m-0"
-            >
-              查看關卡細節
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
+    <AppTheme />
 
-    <section id="bk5">
+    <!-- <section id="bk5">
       <h3
         class="mb-16 w-full bg-[url('@/assets/images/bg/bg_talking_c.png')] bg-[length:100%_100%] bg-bottom bg-no-repeat pb-6 pt-3 text-center text-2xl font-bold text-primary lg:hidden"
       >
@@ -250,9 +155,9 @@ onMounted(() => {
           />
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section
+    <!-- <section
       id="bk6-1"
       class="container relative text-center lg:max-w-[900px] xl:max-w-[1175px]"
     >
@@ -269,9 +174,9 @@ onMounted(() => {
         src="./assets/images/bg/bg_decorate_07.png"
         alt="bg_decorate_07"
       />
-    </section>
+    </section> -->
 
-    <section id="bk6-2" class="mt-[100%] mb-16">
+    <!-- <section id="bk6-2" class="mt-[100%] mb-16">
       <h3
         class="mb-3 w-full bg-[url('@/assets/images/bg/bg_talking_c.png')] bg-[length:100%_100%] bg-bottom bg-no-repeat pb-6 pt-3 text-center text-2xl font-bold text-primary lg:mb-16 lg:bg-[url('@/assets/images/bg/bg_talking.png')] lg:bg-[length:627px_151px] lg:px-16 lg:pt-6 lg:pb-16 lg:text-6xl"
       >
@@ -312,9 +217,9 @@ onMounted(() => {
           </ul>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section id="bk7">
+    <!-- <section id="bk7">
       <h3
         class="mb-3 w-full bg-[url('@/assets/images/bg/bg_talking_c.png')] bg-[length:100%_100%] bg-bottom bg-no-repeat pb-6 pt-3 text-center text-2xl font-bold text-primary lg:mb-16 lg:bg-[url('@/assets/images/bg/bg_talking.png')] lg:bg-[length:466px_151px] lg:px-16 lg:pt-6 lg:pb-16 lg:text-6xl"
       >
@@ -384,9 +289,9 @@ onMounted(() => {
           alt="bg_decorate_08"
         />
       </div>
-    </section> 
+    </section>  -->
 
-    <section id="finished" class="hidden lg:block">
+    <!-- <section id="finished" class="hidden lg:block">
       <div class="container relative lg:max-w-[900px] xl:max-w-[1175px]">
         <img src="./assets/images/main/finish.png" alt="finish" />
         <div id="finisedLine">
@@ -402,9 +307,9 @@ onMounted(() => {
           />
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section id="signup">
+    <!-- <section id="signup">
       <div class="container">
         <img
           class="mx-auto mb-40 w-[226px] lg:mb-0 lg:w-[520px]"
