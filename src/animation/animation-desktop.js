@@ -106,7 +106,7 @@ export default function animationDesktop() {
     scrollTrigger: {
       trigger: "#home",
       start: "top top",
-      end: "bottom+=300px top",
+      end: "bottom+=300 top",
       pin: true,
       scrub: 3,
       markers: true,
@@ -136,8 +136,8 @@ export default function animationDesktop() {
   const question = gsap.timeline({
     scrollTrigger: {
       trigger: "#question",
-      start: "top-=500px top",
-      end: "bottom-=900px top",
+      start: "top-=500 top",
+      end: "bottom-=300 top",
       markers: true,
       scrub: 3,
     },
@@ -268,8 +268,60 @@ export default function animationDesktop() {
       )
   );
 
+  const role = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#role",
+      start: "top-=300 top",
+      end: "bottom-=800 top",
+      scrub: 3,
+      markers: true,
+    },
+  });
+
+  // frame 1
+  role.add(
+    gsap
+      .timeline()
+      .set("#role h3, #role h5, #role .container", {
+        opacity: 0,
+      })
+      .set("#role .container", {
+        translateY: 30,
+      })
+      .to("#character", {
+        scale: 1,
+      })
+  );
+
+  // frame 2
+
+  role.add(
+    gsap.timeline().to("#role h3, #role h5", {
+      opacity: 1,
+    })
+  );
+
+  // frame 3
+  role.add(
+    gsap.timeline().to("#role .container", {
+      translateY: 0,
+      opacity: 1,
+    })
+  );
+
+  // frame 4
+  role.add(hideTarget("#role h3, #role h5"));
+  role.add(
+    gsap.timeline().to("#role .container", {
+      opacity: 0,
+      translateY: 30,
+    }),
+    "-=0.5"
+  );
+
   // 沒什麼作用，調用函式的當下就會執行 gsap
   master.add(home);
   master.add(question);
+  master.add(role);
   return master;
 }
