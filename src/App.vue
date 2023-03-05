@@ -1,13 +1,11 @@
 <script setup>
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { onMounted } from "vue";
 import AppHeader from "@/components/AppHeader.vue";
 import AppSignals from "@/components/AppSignals.vue";
 import AppHome from "@/components/AppHome.vue";
+import AppQuestion from "@/components/AppQuestion.vue";
 import animation from "./animation";
-
-gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
   const { animationDesktop } = animation;
@@ -22,67 +20,38 @@ onMounted(() => {
 <template>
   <div class="fixed inset-0 -z-50 bg-secondary"></div>
   <AppHeader></AppHeader>
+  <img
+    id="logo-sm"
+    class="hidden opacity-0 lg:fixed lg:top-[30px] lg:left-[40px] lg:w-[200px]"
+    src="@/assets/images/logo/logo.png"
+    alt="small logo"
+  />
   <div id="home-bg">
     <img
       id="startLine"
-      class="hidden w-[1430px] lg:absolute lg:block"
+      class="hidden w-[1430px] lg:fixed lg:block"
       src="@/assets/images/main/start.png"
       alt="start"
     />
     <img
       id="cloud-1"
-      class="absolute top-[55%] -left-5 w-[113px] lg:top-[45%] lg:w-[271px]"
+      class="fixed top-[55%] -left-5 w-[113px] lg:top-[45%] lg:w-[271px]"
       src="@/assets/images/bg/bg_decorate_01.png"
-      alt="bg_decorate_01"
+      alt="cloud-1"
     />
     <img
       id="cloud-2"
-      class="absolute top-[55%] -right-9 w-[127px] lg:-right-[3rem] lg:top-[45%] lg:w-[305px]"
+      class="fixed top-[55%] -right-9 w-[127px] lg:-right-[3rem] lg:top-[45%] lg:w-[305px]"
       src="@/assets/images/bg/bg_decorate_05.png"
-      alt="bg_decorate_05"
+      alt="cloud-2"
     />
     <AppSignals />
   </div>
   <main class="relative">
     <AppHome />
 
-    <section id="question">
-      <h3
-        class="mb-3 w-full bg-[url('@/assets/images/bg/bg_talking_c.png')] bg-[length:100%_100%] bg-bottom bg-no-repeat pb-6 pt-3 text-center text-2xl font-bold text-primary lg:mb-16 lg:bg-[url('@/assets/images/bg/bg_talking.png')] lg:bg-[length:736px_151px] lg:pt-6 lg:pb-16 lg:text-6xl"
-      >
-        你是否也有以下困擾？
-      </h3>
-
-      <div
-        class="container mb-16 text-center lg:flex lg:max-w-[900px] xl:max-w-[1175px]"
-      >
-        <div class="lg:mx-2">
-          <h4 class="text-highlight">羨慕別人的酷酷網頁動畫？</h4>
-          <picture>
-            <source
-              media="(min-width: 1175px)"
-              srcset="@/assets/images/main/question_1.png"
-            />
-            <img src="@/assets/images/main/question_1_m.png" alt="Q1-m" />
-          </picture>
-        </div>
-        <div class="lg:mx-2">
-          <h4 class="text-highlight">滿足不了同事的許願？</h4>
-          <img src="@/assets/images/main/question_2.png" alt="Q2" />
-        </div>
-        <div class="lg:mx-2">
-          <h4 class="text-highlight">動畫技能樹太雜無從下手？</h4>
-          <picture>
-            <source
-              media="(min-width: 1175px)"
-              srcset="@/assets/images/main/question_3.png"
-            />
-            <img src="@/assets/images/main/question_3_m.png" alt="Q3-m" />
-          </picture>
-        </div>
-      </div>
-    </section>
-
+    <AppQuestion />
+    <!-- 
     <section id="bk3">
       <h3
         class="mb-3 w-full bg-[url('@/assets/images/bg/bg_talking_c.png')] bg-[length:100%_100%] bg-bottom bg-no-repeat pb-6 pt-3 text-center text-2xl font-bold text-primary lg:bg-[url('@/assets/images/bg/bg_talking.png')] lg:bg-[length:875px_151px] lg:pt-6 lg:pb-16 lg:text-6xl"
@@ -533,10 +502,10 @@ onMounted(() => {
         />
         <h2 class="text-center text-highlight">立即報名</h2>
       </div>
-    </section>
+    </section> -->
     <div
       id="character"
-      class="container fixed bottom-0 left-0 right-0 z-20 flex items-center justify-center lg:max-w-[900px] xl:max-w-[1175px]"
+      class="container fixed bottom-0 left-0 right-0 z-20 flex origin-bottom items-center justify-center lg:max-w-[900px] xl:max-w-[1175px]"
     >
       <img
         class="absolute bottom-0 -z-10"
@@ -557,6 +526,17 @@ onMounted(() => {
         class="w-[30%]"
         src="@/assets/images/character/character_team.gif"
         alt="pig"
+      /><img
+        id="grass-1"
+        class="absolute -bottom-[30%] -left-[10%] -z-20 hidden w-[150px] origin-bottom scale-x-[-1] lg:block"
+        src="./assets/images/bg/bg_decorate_09.png"
+        alt="grass"
+      />
+      <img
+        id="grass-2"
+        class="absolute -bottom-[30%] -right-[10%] -z-20 hidden w-[150px] origin-bottom lg:block"
+        src="./assets/images/bg/bg_decorate_09.png"
+        alt="grass"
       />
     </div>
   </main>

@@ -4,11 +4,11 @@ import AppParticipants from "@/components/AppParticipants.vue";
 <template>
   <section
     id="home"
-    class="container mb-20 h-screen pt-[91px] lg:max-w-[900px] lg:pt-[268px] xl:max-w-[1175px]"
+    class="container mb-20 pt-[91px] lg:max-w-[900px] lg:pt-[268px] xl:max-w-[1175px]"
   >
     <img
-      id="logo-sm"
-      class="mx-auto mb-3 w-[253px] lg:fixed lg:top-[30px] lg:left-[40px] lg:hidden lg:w-[200px]"
+      id="logo-mobile"
+      class="mx-auto mb-3 w-[253px] lg:hidden"
       src="@/assets/images/logo/logo.png"
       alt="small logo"
     />
