@@ -7,6 +7,7 @@ import AppHome from "@/components/AppHome.vue";
 import AppQuestion from "@/components/AppQuestion.vue";
 import AppRole from "@/components/AppRole.vue";
 import AppTheme from "@/components/AppTheme.vue";
+import AppSchedule from "@/components/AppSchedule.vue";
 import animation from "./animation";
 
 onMounted(() => {
@@ -24,7 +25,7 @@ onMounted(() => {
   <AppHeader></AppHeader>
   <img
     id="logo-sm"
-    class="hidden opacity-0 lg:fixed lg:top-[30px] lg:left-[40px] lg:w-[200px]"
+    class="z-10 hidden opacity-0 lg:fixed lg:top-[30px] lg:left-[40px] lg:w-[200px]"
     src="@/assets/images/logo/logo.png"
     alt="small logo"
   />
@@ -58,104 +59,7 @@ onMounted(() => {
 
     <AppTheme />
 
-    <!-- <section id="bk5">
-      <h3
-        class="mb-16 w-full bg-[url('@/assets/images/bg/bg_talking_c.png')] bg-[length:100%_100%] bg-bottom bg-no-repeat pb-6 pt-3 text-center text-2xl font-bold text-primary lg:hidden"
-      >
-        重要時程
-      </h3>
-      <div
-        class="container relative lg:flex lg:max-w-[900px] lg:items-start lg:justify-between xl:max-w-[1175px]"
-      >
-        <div class="mb-20 flex flex-col items-center justify-center lg:mb-0">
-          <div class="flex h-[160px] flex-col items-center justify-center">
-            <img
-              src="@/assets/images/btn/btn_joinHand.png"
-              alt="joinHand"
-              class="mb-1 w-[57px]"
-            />
-            <img
-              src="@/assets/images/btn/btn_join.png"
-              alt="join"
-              class="mb-3 w-[103px]"
-            />
-          </div>
-          <h2 class="mb-3 text-highlight">SIGN UP</h2>
-          <h4 class="mb-3 rounded-full bg-primary px-7 py-2 text-white">
-            10/13 - 11/6
-          </h4>
-          <h5 class="text-secondary-dark lg:mb-5">截止前可修改報名組別</h5>
-          <div class="hidden h-[140px] w-8 lg:block">
-            <img
-              class="h-full w-full object-cover object-bottom"
-              src="@/assets/images/main/date_weekLine.png"
-              alt="date-weekline"
-            />
-          </div>
-        </div>
-        <div class="mb-20 flex flex-col items-center justify-center lg:mb-0">
-          <div class="h-[160px]">
-            <img
-              src="@/assets/images/main/date_start.png"
-              alt="date-start"
-              class="mb-2 w-[140px]"
-            />
-          </div>
-          <h2 class="mb-3 text-highlight">START</h2>
-          <h4 class="mb-3 rounded-full bg-primary px-7 py-2 text-white">
-            10/31 - 11/28
-          </h4>
-          <h5 class="text-center text-secondary-dark lg:mb-5">
-            10/31(一) UI、團體組開賽<br />11/7(一) 前端組開賽
-          </h5>
-          <div class="hidden h-[70px] w-8 lg:block">
-            <img
-              class="h-full w-full object-cover object-bottom"
-              src="@/assets/images/main/date_weekLine.png"
-              alt="date-weekline"
-            />
-          </div>
-        </div>
-        <div class="mb-20 flex flex-col items-center justify-center lg:mb-0">
-          <div class="h-[160px]">
-            <img
-              src="@/assets/images/main/date_upload.png"
-              alt="date-upload"
-              class="mb-2 w-[140px]"
-            />
-          </div>
-          <h2 class="mb-3 text-highlight">UPLOAD</h2>
-          <h4 class="mb-3 rounded-full bg-primary px-7 py-2 text-white">
-            10/31 - 11/28
-          </h4>
-          <h5
-            class="inline-flex flex-col items-center justify-center text-secondary-dark lg:mb-5"
-          >
-            依賽程登錄作品
-            <em class="block not-italic text-highlight"
-              >額外競賽： 主題豐厚獎金等著你</em
-            >
-          </h5>
-          <div class="hidden h-[110px] w-8 lg:block">
-            <img
-              class="h-full w-full object-cover object-bottom"
-              src="@/assets/images/main/date_weekLine.png"
-              alt="date-weekline"
-            />
-          </div>
-        </div>
-        <div
-          id="date-line"
-          class="absolute bottom-[-80px] hidden h-[140px] lg:block"
-        >
-          <img
-            class="translate-x-[-30px]"
-            src="@/assets/images/main/date_line.png"
-            alt="date-line"
-          />
-        </div>
-      </div>
-    </section> -->
+    <AppSchedule />
 
     <!-- <section
       id="bk6-1"

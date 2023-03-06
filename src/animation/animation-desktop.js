@@ -411,9 +411,82 @@ export default function animationDesktop() {
   theme.add(hideTarget("#theme h3, #theme h5"));
   theme.add(
     gsap.timeline().to("#character", {
-      scale: 0.75,
+      scale: "+=0.35",
     }),
     "-=0.5"
+  );
+
+  const schedule = gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: "#schedule",
+        // start: "top-=300 top",
+        // end: "bottom-=100 top",
+        scrub: 3,
+        pin: true,
+        markers: true,
+      },
+    })
+    .set("#schedule li > div", {
+      opacity: 0,
+    })
+    .set("#schedule li > div:first-child", {
+      translateY: "10%",
+    });
+
+  // frame 1
+  schedule.add(
+    gsap.timeline().to("#date-line-mask", {
+      left: "100%",
+    })
+  );
+  // console.log(document.querySelector("#schedule li:nth-child(1)"));
+  // frame 2
+  schedule.add(
+    gsap
+      .timeline()
+      .to("#schedule li:nth-child(1) > div:first-child", {
+        translateY: 0,
+      })
+      .to(
+        "#schedule li:nth-child(1) > div",
+        {
+          opacity: 1,
+        },
+        "-=0.5"
+      )
+  );
+
+  // frame 3
+  schedule.add(
+    gsap
+      .timeline()
+      .to("#schedule li:nth-child(2) > div:first-child", {
+        translateY: 0,
+      })
+      .to(
+        "#schedule li:nth-child(2) > div",
+        {
+          opacity: 1,
+        },
+        "-=0.5"
+      )
+  );
+
+  // frame 4
+  schedule.add(
+    gsap
+      .timeline()
+      .to("#schedule li:nth-child(3) > div:first-child", {
+        translateY: 0,
+      })
+      .to(
+        "#schedule li:nth-child(3) > div",
+        {
+          opacity: 1,
+        },
+        "-=0.5"
+      )
   );
 
   // 沒什麼作用，調用函式的當下就會執行 gsap
@@ -421,5 +494,6 @@ export default function animationDesktop() {
   master.add(question);
   master.add(role);
   master.add(theme);
+  master.add(schedule);
   return master;
 }
