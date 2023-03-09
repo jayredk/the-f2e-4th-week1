@@ -138,6 +138,7 @@ export default function animationDesktop() {
       markers: true,
       scrub: 3,
       pin: true,
+      pinSpacing: false,
     },
   });
   // Question
@@ -157,8 +158,11 @@ export default function animationDesktop() {
       .to("#question h3", {
         opacity: 1,
       })
-      .to(
+      .fromTo(
         "#character",
+        {
+          scale: 1,
+        },
         {
           scale: 0.75,
         },
@@ -269,9 +273,15 @@ export default function animationDesktop() {
   // frame 5
   question.add(hideTarget("#question"));
   question.add(
-    gsap.timeline().to("#character", {
-      scale: 1,
-    }),
+    gsap.timeline().fromTo(
+      "#character",
+      {
+        scale: 0.75,
+      },
+      {
+        scale: 1,
+      }
+    ),
     "-=0.5"
   );
 
@@ -280,6 +290,7 @@ export default function animationDesktop() {
       trigger: "#role",
       scrub: 3,
       pin: true,
+      pinSpacing: false,
       markers: true,
     },
   });
@@ -331,6 +342,7 @@ export default function animationDesktop() {
         scrub: 3,
         pin: true,
         markers: true,
+        pinSpacing: false,
       },
     })
     .set("#theme h3, #theme h5, #theme .block", {
@@ -410,21 +422,27 @@ export default function animationDesktop() {
   // frame 6
   theme.add(hideTarget("#theme h3, #theme h5"));
   theme.add(
-    gsap.timeline().to("#character", {
-      scale: "+=0.35",
-    }),
+    gsap.timeline().fromTo(
+      "#character",
+      {
+        scale: 0.4,
+      },
+      {
+        scale: 0.75,
+      }
+    ),
     "-=0.5"
   );
 
-  const schedule = gsap
+  const event = gsap
     .timeline({
       scrollTrigger: {
         trigger: "#schedule",
-        // start: "top-=300 top",
-        // end: "bottom-=100 top",
+        end: "bottom+=1000 top",
         scrub: 3,
         pin: true,
         markers: true,
+        // pinSpacing: false,
       },
     })
     .set("#schedule li > div", {
@@ -432,17 +450,27 @@ export default function animationDesktop() {
     })
     .set("#schedule li > div:first-child", {
       translateY: "10%",
+    })
+    .set("#cloud-3", {
+      left: "-30%",
+    })
+    .set("#cloud-4", {
+      right: "-30%",
+    })
+    .set("#schedule-question", {
+      scale: 2,
+      opacity: 0,
     });
 
   // frame 1
-  schedule.add(
+  event.add(
     gsap.timeline().to("#date-line-mask", {
       left: "100%",
     })
   );
-  // console.log(document.querySelector("#schedule li:nth-child(1)"));
+
   // frame 2
-  schedule.add(
+  event.add(
     gsap
       .timeline()
       .to("#schedule li:nth-child(1) > div:first-child", {
@@ -458,7 +486,7 @@ export default function animationDesktop() {
   );
 
   // frame 3
-  schedule.add(
+  event.add(
     gsap
       .timeline()
       .to("#schedule li:nth-child(2) > div:first-child", {
@@ -474,7 +502,7 @@ export default function animationDesktop() {
   );
 
   // frame 4
-  schedule.add(
+  event.add(
     gsap
       .timeline()
       .to("#schedule li:nth-child(3) > div:first-child", {
@@ -489,11 +517,179 @@ export default function animationDesktop() {
       )
   );
 
+  // frame 5
+  event.add(
+    gsap
+      .timeline()
+
+      .to("#schedule ul.container", {
+        translateY: -30,
+        opacity: 0,
+      })
+      .to(
+        "#date-line",
+        {
+          opacity: 0,
+        },
+        "-=0.5"
+      )
+  );
+
+  event.add(
+    gsap
+      .timeline()
+      .fromTo(
+        "#character",
+        {
+          scale: 0.75,
+        },
+        {
+          scale: 1,
+        }
+      )
+      .to(
+        "#cloud-3",
+        {
+          left: "-5%",
+        },
+        "-=0.5"
+      )
+      .to(
+        "#cloud-4",
+        {
+          right: "-5%",
+        },
+        "-=0.5"
+      ),
+    "-=0.5"
+  );
+
+  event.add(
+    gsap
+      .timeline()
+      .to("#schedule-question", {
+        opacity: 1,
+        scale: 1,
+        duration: 1,
+      })
+      .to(
+        "#cloud-3",
+        {
+          left: "5%",
+          duration: 1,
+        },
+        "-=1"
+      )
+      .to(
+        "#cloud-4",
+        {
+          right: "5%",
+          duration: 1,
+        },
+        "-=1"
+      )
+  );
+
+  // frame 6
+  event.add(
+    gsap
+      .timeline()
+      .to("#schedule-question", {
+        opacity: 0,
+        duration: 1,
+      })
+      .to(
+        "#cloud-3",
+        {
+          opacity: 0,
+          scale: 0,
+          duration: 1,
+        },
+        "-=1"
+      )
+      .to(
+        "#cloud-4",
+        {
+          opacity: 0,
+          scale: 0,
+          duration: 1,
+        },
+        "-=1"
+      )
+      .fromTo(
+        "#character",
+        {
+          scale: 1,
+        },
+        {
+          scale: 0.75,
+          duration: 1,
+        },
+        "-=1"
+      )
+      .fromTo(
+        "#prize",
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 1,
+        },
+        "-=1"
+      )
+      .fromTo(
+        "#prize .container",
+        {
+          translateX: "-15%",
+        },
+        {
+          translateX: 0,
+          duration: 1,
+        },
+        "-=1"
+      )
+      .to(
+        "#trophy-light",
+        {
+          rotate: -180,
+          duration: 1,
+        },
+        "-=1"
+      )
+  );
+
+  // frame 7
+  event.add(
+    gsap
+      .timeline()
+      .to("#prize", {
+        opacity: 0,
+        duration: 1,
+      })
+      .to(
+        "#prize .container",
+        {
+          translateX: "15%",
+          duration: 1,
+        },
+        "-=1"
+      )
+      .to(
+        "#trophy-light",
+        {
+          rotate: -360,
+          duration: 1,
+        },
+        "-=1"
+      )
+  );
+
   // 沒什麼作用，調用函式的當下就會執行 gsap
   master.add(home);
   master.add(question);
   master.add(role);
   master.add(theme);
-  master.add(schedule);
+  master.add(event);
   return master;
 }

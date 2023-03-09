@@ -2,10 +2,10 @@
   <div class="fixed z-10 h-[60px] w-full bg-secondary lg:bg-transparent">
     <div
       id="panel"
-      class="fixed z-10 max-w-[155px] -translate-x-[155px] lg:h-screen lg:-translate-x-[135px] lg:bg-[url('@/assets/images/bg/bg_menuSide.png')] lg:bg-right lg:bg-no-repeat lg:pt-0"
+      class="fixed z-10 max-w-[155px] -translate-x-[155px] lg:min-h-screen lg:-translate-x-[135px] lg:bg-[url('@/assets/images/bg/bg_menuSide.png')] lg:bg-right lg:bg-no-repeat lg:pt-0"
     >
       <!-- TODO： 把 navbar 拆出來 -->
-      <nav id="navbar" class="h-full bg-primary px-10 pt-10 text-secondary">
+      <nav id="navbar" class="h-screen bg-primary px-10 pt-10 text-secondary">
         <ul>
           <li class="mb-10">
             <img

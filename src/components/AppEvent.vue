@@ -1,5 +1,9 @@
+<script setup>
+import AppEventPrize from "./AppEventPrize.vue";
+</script>
+
 <template>
-  <section id="schedule" class="h-screen">
+  <section id="schedule" class="relative min-h-screen">
     <h3
       class="mb-16 w-full bg-[url('@/assets/images/bg/bg_talking_c.png')] bg-[length:100%_100%] bg-bottom bg-no-repeat pb-6 pt-3 text-center text-2xl font-bold text-primary lg:hidden"
     >
@@ -107,5 +111,25 @@
       ></div>
       <img src="@/assets/images/main/date_line.png" alt="date-line" />
     </div>
+
+    <h2
+      id="schedule-question"
+      class="my-[25%] text-center text-highlight lg:absolute lg:top-[20%] lg:left-0 lg:right-0 lg:my-0"
+    >
+      區區修煉<br class="lg:hidden" />已經無法滿足了嗎？
+    </h2>
+    <img
+      id="cloud-3"
+      class="absolute top-[45%] left-0 hidden w-[368px] origin-right lg:block"
+      src="@/assets/images/bg/bg_decorate_03.png"
+      alt="bg_decorate_03"
+    />
+    <img
+      id="cloud-4"
+      class="absolute top-[30%] right-0 hidden w-[450px] origin-left lg:block"
+      src="@/assets/images/bg/bg_decorate_07.png"
+      alt="bg_decorate_07"
+    />
+    <AppEventPrize />
   </section>
 </template>

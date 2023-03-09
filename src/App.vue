@@ -7,7 +7,7 @@ import AppHome from "@/components/AppHome.vue";
 import AppQuestion from "@/components/AppQuestion.vue";
 import AppRole from "@/components/AppRole.vue";
 import AppTheme from "@/components/AppTheme.vue";
-import AppSchedule from "@/components/AppSchedule.vue";
+import AppEvent from "@/components/AppEvent.vue";
 import animation from "./animation";
 
 onMounted(() => {
@@ -59,39 +59,20 @@ onMounted(() => {
 
     <AppTheme />
 
-    <AppSchedule />
+    <AppEvent />
 
-    <!-- <section
-      id="bk6-1"
-      class="container relative text-center lg:max-w-[900px] xl:max-w-[1175px]"
-    >
-      <h2 class="text-highlight">
-        區區修煉<br class="lg:hidden" />已經無法滿足了嗎？
-      </h2>
-      <img
-        class="absolute top-[200%] left-0 hidden w-[368px] lg:block"
-        src="./assets/images/bg/bg_decorate_03.png"
-        alt="bg_decorate_03"
-      />
-      <img
-        class="absolute top-[150%] right-0 hidden w-[450px] lg:block"
-        src="./assets/images/bg/bg_decorate_07.png"
-        alt="bg_decorate_07"
-      />
-    </section> -->
-
-    <!-- <section id="bk6-2" class="mt-[100%] mb-16">
+    <!-- <section id="award" class="mb-16 lg:absolute lg:left-0 lg:right-0">
       <h3
-        class="mb-3 w-full bg-[url('@/assets/images/bg/bg_talking_c.png')] bg-[length:100%_100%] bg-bottom bg-no-repeat pb-6 pt-3 text-center text-2xl font-bold text-primary lg:mb-16 lg:bg-[url('@/assets/images/bg/bg_talking.png')] lg:bg-[length:627px_151px] lg:px-16 lg:pt-6 lg:pb-16 lg:text-6xl"
+        class="mb-3 mt-8 w-full bg-[url('@/assets/images/bg/bg_talking_c.png')] bg-[length:100%_100%] bg-bottom bg-no-repeat pb-6 pt-3 text-center text-2xl font-bold text-primary lg:mb-16 lg:bg-[url('@/assets/images/bg/bg_talking.png')] lg:bg-[length:627px_151px] lg:px-16 lg:pt-6 lg:pb-16 lg:text-6xl"
       >
         還有比賽等著你！
       </h3>
 
       <div
-        class="container lg:flex lg:max-w-[900px] lg:justify-between xl:max-w-[1175px]"
+        class="container lg:flex lg:max-w-full lg:justify-center xl:max-w-[1175px]"
       >
         <img
-          class="mx-auto w-[335px] lg:m-0 lg:w-[375px]"
+          class="mx-auto w-[335px] lg:m-0 lg:mr-16 lg:w-[375px]"
           src="./assets/images/main/award.png"
           alt="award"
         />
