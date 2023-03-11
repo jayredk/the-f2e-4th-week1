@@ -102,15 +102,22 @@ export default function animationDesktop() {
     },
   });
 
-  const home = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#home",
-      end: "bottom+=500 top",
-      pin: true,
-      scrub: 3,
-      markers: true,
-    },
-  });
+  const home = gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: "#home",
+        end: "bottom+=500 top",
+        pin: true,
+        scrub: 3,
+        markers: true,
+      },
+    })
+    .set("#cloud-1", {
+      x: 0,
+    })
+    .set("#cloud-2", {
+      x: 0,
+    });
 
   // Home
   // frame 1
@@ -442,7 +449,6 @@ export default function animationDesktop() {
         scrub: 3,
         pin: true,
         markers: true,
-        // pinSpacing: false,
       },
     })
     .set("#schedule li > div", {
@@ -627,6 +633,13 @@ export default function animationDesktop() {
         },
         "-=1"
       )
+      .to(
+        "#cat",
+        {
+          scale: 0.8,
+        },
+        "-=1"
+      )
       .fromTo(
         "#prize",
         {
@@ -685,11 +698,398 @@ export default function animationDesktop() {
       )
   );
 
+  const sponsor = gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: "#sponsor",
+        scrub: 3,
+        pin: true,
+        markers: true,
+      },
+    })
+    .set("#sponsor h3, #sponsor ul.container", {
+      opacity: 0,
+    })
+    .set("#sponsor li:nth-child(1)", {
+      yPercent: 10,
+    })
+    .set("#sponsor li:nth-child(2)", {
+      yPercent: 30,
+    })
+    .set("#sponsor li:nth-child(3)", {
+      yPercent: 50,
+    })
+    .set("#tree-1, #tree-2", {
+      scale: 1.5,
+      translateY: "10%",
+      opacity: 0,
+    })
+    .set("#tree-1", {
+      translateX: "-50%",
+    })
+    .set("#tree-2", {
+      translateX: "50%",
+    });
+
+  // frame 1
+  sponsor.add(
+    gsap
+      .timeline()
+      .to("#sponsor h3", {
+        opacity: 1,
+      })
+      .to(
+        "#tree-1",
+        {
+          translateX: "-20%",
+          translateY: "0%",
+          opacity: 1,
+        },
+        "-=0.5"
+      )
+      .to(
+        "#tree-2",
+        {
+          translateX: "20%",
+          translateY: "0%",
+          opacity: 1,
+        },
+        "-=0.5"
+      )
+      .fromTo(
+        "#character",
+        {
+          scale: 0.75,
+        },
+        {
+          scale: 0.8,
+        },
+        "-=0.5"
+      )
+      .to(
+        "#dog",
+        {
+          translateX: "-5%",
+        },
+        "-=0.5"
+      )
+      .to("#pig", {
+        scale: 0.8,
+        translateX: "5%",
+      })
+  );
+
+  // frame 2
+  sponsor.add(
+    gsap
+      .timeline()
+      .to("#tree-1, #tree-2", {
+        scale: 1,
+        translateX: "0%",
+      })
+      .to(
+        "#sponsor ul",
+        {
+          opacity: 1,
+        },
+        "-=0.5"
+      )
+      .to(
+        "#sponsor li",
+        {
+          yPercent: 0,
+        },
+        "-=0.5"
+      )
+  );
+
+  // frame 3
+  sponsor.add(
+    gsap
+      .timeline()
+      .to("#sponsor", {
+        opacity: 0,
+      })
+      .to(
+        "#sponsor li",
+        {
+          yPercent: 10,
+        },
+        "-=0.5"
+      )
+      .to(
+        "#tree-1",
+        {
+          translateX: "20%",
+          opacity: 0,
+          scale: 0.7,
+        },
+        "-=0.5"
+      )
+      .to(
+        "#tree-2",
+        {
+          translateX: "-20%",
+          opacity: 0,
+          scale: 0.7,
+        },
+        "-=0.5"
+      )
+      .fromTo(
+        "#cloud-1",
+        {
+          translateX: "-100%",
+          translateY: "70%",
+          scale: 1,
+        },
+        {
+          translateX: "5%",
+          translateY: "50%",
+          scale: 1,
+        },
+        "-=0.5"
+      )
+      .fromTo(
+        "#cloud-2",
+        {
+          translateX: "100%",
+          translateY: "70%",
+          scale: 1,
+        },
+        {
+          translateX: "-5%",
+          translateY: "50%",
+          scale: 1,
+        },
+        "-=0.5"
+      )
+  );
+
+  const finish = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#finish",
+      end: "bottom+=800 bottom",
+      pin: true,
+      scrub: 3,
+      markers: true,
+    },
+  });
+
+  // frame 1
+  finish.add(
+    gsap
+      .timeline()
+      .fromTo(
+        "#goal, #goal-line",
+        {
+          opacity: 0,
+          scale: 2,
+        },
+        {
+          opacity: 1,
+          scale: 1,
+        }
+      )
+      .to(
+        "#character",
+        {
+          scale: 1,
+        },
+        "-=0.5"
+      )
+      .to(
+        "#dog",
+        {
+          translateX: "0%",
+        },
+        "-=0.5"
+      )
+      .to(
+        "#cat",
+        {
+          scale: 1,
+        },
+        "-=0.5"
+      )
+      .to(
+        "#pig",
+        {
+          translateX: "0%",
+          scale: 1,
+        },
+        "-=0.5"
+      )
+      .to(
+        "#cloud-1",
+        {
+          translateX: "50%",
+          translateY: "20%",
+        },
+        "-=0.5"
+      )
+      .to(
+        "#cloud-2",
+        {
+          translateX: "-50%",
+          translateY: "20%",
+        },
+        "-=0.5"
+      )
+  );
+
+  // frame 2
+  finish.add(
+    gsap
+      .timeline()
+      .fromTo(
+        "#goal-line-l",
+        {
+          translateX: "2%",
+        },
+        {
+          rotate: "-5deg",
+          translateX: "0%",
+          translateY: "30%",
+        }
+      )
+      .fromTo(
+        "#goal-line-r",
+        {
+          translateX: "-2%",
+        },
+        {
+          rotate: "5deg",
+          translateX: "0%",
+          translateY: "30%",
+        },
+        "-=0.5"
+      )
+      .to(
+        "#dog, #cat, #pig",
+        {
+          scale: 1.2,
+        },
+        "-=0.5"
+      )
+      .to(
+        "#cloud-1",
+        {
+          translateX: "100%",
+          scale: 0.8,
+        },
+        "-=0.5"
+      )
+      .to(
+        "#cloud-2",
+        {
+          translateX: "-100%",
+          scale: 0.8,
+        },
+        "-=0.5"
+      )
+  );
+
+  // frame 3
+  finish.add(
+    gsap
+      .timeline()
+      .to("#goal-line-l", {
+        translateX: "-50%",
+        opacity: 0,
+      })
+      .to(
+        "#goal-line-r",
+        {
+          translateX: "50%",
+          opacity: 0,
+        },
+        "-=0.5"
+      )
+      .to(
+        "#dog, #cat, #pig",
+        {
+          scale: 1.4,
+        },
+        "-=0.5"
+      )
+      .to(
+        "#cloud-1",
+        {
+          translateX: "150%",
+          scale: 0.6,
+          opacity: 0,
+        },
+        "-=0.5"
+      )
+      .to(
+        "#cloud-2",
+        {
+          translateX: "-150%",
+          scale: 0.6,
+          opacity: 0,
+        },
+        "-=0.5"
+      )
+  );
+
+  // frame 4
+  finish.add(
+    gsap.timeline().to("#dog, #cat, #pig", {
+      scale: 2,
+      opacity: 0,
+    })
+  );
+
+  // frame 5
+  finish.add(
+    gsap.timeline().to("#goal", {
+      opacity: 0,
+    })
+  );
+
+  // frame 6
+  finish.add(
+    gsap
+      .timeline()
+      .fromTo(
+        "#signup-logo",
+        {
+          yPercent: 10,
+          opacity: 0,
+        },
+        {
+          yPercent: 0,
+          opacity: 1,
+        }
+      )
+      .fromTo(
+        "#signup-btn",
+        {
+          yPercent: 30,
+          opacity: 0,
+        },
+        {
+          yPercent: 0,
+          opacity: 1,
+        },
+        "-=0.5"
+      )
+      .to(
+        "#logo-sm",
+        {
+          opacity: 0,
+        },
+        "-=0.5"
+      )
+  );
+
   // 沒什麼作用，調用函式的當下就會執行 gsap
   master.add(home);
   master.add(question);
   master.add(role);
   master.add(theme);
   master.add(event);
+  master.add(sponsor);
+  master.add(finish);
   return master;
 }
