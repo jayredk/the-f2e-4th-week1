@@ -144,7 +144,10 @@ onMounted(() => {
         </div>
       </section>
 
-      <section id="signup" class="absolute top-[20%] left-0 right-0">
+      <section
+        id="signup"
+        class="lg:absolute lg:top-[20%] lg:left-0 lg:right-0"
+      >
         <div class="container">
           <img
             id="signup-logo"
@@ -152,15 +155,20 @@ onMounted(() => {
             src="./assets/images/logo/logo.png"
             alt="logo"
           />
-          <div id="signup-btn">
+          <div id="signup-btn" class="group">
             <img
-              class="mx-auto w-[46px] lg:w-[84px]"
-              src="./assets/images/btn/btn_joinHand.gif"
+              class="mx-auto w-[46px] group-hover:invisible lg:w-[84px]"
+              src="@/assets/images/btn/btn_joinHand.gif"
               alt="btn_joinHand"
             />
             <img
-              class="mx-auto mb-5 w-[88px] lg:w-[160px]"
-              src="./assets/images/btn/btn_join.png"
+              class="mx-auto mb-5 w-[88px] group-hover:hidden lg:w-[160px]"
+              src="@/assets/images/btn/btn_join.png"
+              alt="btn_join"
+            />
+            <img
+              class="mx-auto mb-5 hidden w-[88px] group-hover:block lg:w-[160px]"
+              src="@/assets/images/btn/btn_join_h.png"
               alt="btn_join"
             />
             <h2 class="text-center text-highlight">立即報名</h2>
