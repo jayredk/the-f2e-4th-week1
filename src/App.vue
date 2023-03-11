@@ -30,6 +30,7 @@ onMounted(() => {
     src="@/assets/images/logo/logo.png"
     alt="small logo"
   />
+
   <div id="home-bg">
     <img
       id="startLine"
@@ -51,6 +52,21 @@ onMounted(() => {
     />
     <AppSignals />
   </div>
+
+  <a
+    id="join-btn"
+    class="fixed bottom-5 right-5 z-10 hidden max-w-[103px] lg:flex lg:flex-col lg:items-center"
+    href="#"
+  >
+    <p class="text-2xl font-bold text-primary">JOIN</p>
+    <img
+      class="w-[57px]"
+      src="./assets/images/btn/btn_joinHand.gif"
+      alt="joinHand"
+    />
+    <img src="./assets/images/btn/btn_join.png" alt="btn_join" />
+  </a>
+
   <main class="relative z-0">
     <div
       id="character"
@@ -103,6 +119,7 @@ onMounted(() => {
         alt="bg_decorate_08"
       />
     </div>
+
     <AppHome />
 
     <AppQuestion />

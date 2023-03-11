@@ -455,10 +455,10 @@ export default function animationDesktop() {
       y: "10%",
     })
     .set("#cloud-3", {
-      left: "-30%",
+      left: "-35%",
     })
     .set("#cloud-4", {
-      right: "-30%",
+      right: "-35%",
     })
     .set("#schedule-question", {
       scale: 2,
@@ -1122,6 +1122,13 @@ export default function animationDesktop() {
       )
       .to(
         "#logo-sm",
+        {
+          opacity: 0,
+        },
+        "-=0.5"
+      )
+      .to(
+        "#join-btn",
         {
           opacity: 0,
         },
