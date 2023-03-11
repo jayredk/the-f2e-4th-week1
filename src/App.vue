@@ -33,19 +33,19 @@ onMounted(() => {
   <div id="home-bg">
     <img
       id="startLine"
-      class="hidden w-[1430px] lg:fixed lg:block"
+      class="hidden w-[1430px] lg:fixed lg:left-0 lg:right-0 lg:mx-auto lg:block"
       src="@/assets/images/main/start.png"
       alt="start"
     />
     <img
       id="cloud-1"
-      class="fixed top-[55%] -left-5 w-[113px] lg:top-[35%] lg:w-[271px]"
+      class="fixed top-[55%] -left-5 w-[113px] md:w-[271px] lg:top-[15%] lg:w-[430px]"
       src="@/assets/images/bg/bg_decorate_01.png"
       alt="cloud-1"
     />
     <img
       id="cloud-2"
-      class="fixed top-[55%] -right-9 w-[127px] lg:-right-[3rem] lg:top-[45%] lg:w-[305px]"
+      class="fixed top-[55%] -right-9 w-[127px] md:w-[305px] lg:-right-[3rem] lg:top-[20%] lg:w-[485px]"
       src="@/assets/images/bg/bg_decorate_05.png"
       alt="cloud-2"
     />
@@ -54,7 +54,7 @@ onMounted(() => {
   <main class="relative z-0">
     <div
       id="character"
-      class="container fixed bottom-0 left-0 right-0 z-20 flex origin-bottom items-center justify-center lg:max-w-[900px] xl:max-w-[1175px]"
+      class="container fixed bottom-0 left-0 right-0 z-10 flex origin-bottom items-center justify-center lg:max-w-[900px] xl:max-w-[1175px]"
     >
       <img
         class="absolute bottom-0 -z-10"

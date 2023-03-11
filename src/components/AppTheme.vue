@@ -10,9 +10,7 @@
     >
       各路廠商強強聯手<br />共同設計出接地氣的網頁互動挑戰關卡
     </h5>
-    <div
-      class="container mb-16 text-center lg:max-w-[900px] lg:text-left xl:max-w-[1175px]"
-    >
+    <div class="container mb-16 text-center lg:max-w-[80%] lg:text-left">
       <div class="mb-10 block lg:flex lg:max-w-[820px] lg:items-start">
         <img
           class="mx-auto w-[200px] lg:mr-10 lg:ml-0 lg:w-[280px]"

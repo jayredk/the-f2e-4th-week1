@@ -96,11 +96,7 @@ function showSmallLogo() {
 }
 
 export default function animationDesktop() {
-  const master = gsap.timeline({
-    onUpdate: () => {
-      console.log(gsap.utils.clamp(0, 1, master.progress()));
-    },
-  });
+  const master = gsap.timeline();
 
   const home = gsap
     .timeline({
@@ -129,7 +125,8 @@ export default function animationDesktop() {
   home.add(showYellowSignal(), "-=0.5");
 
   // frame 3
-  home.add(moveToX(["#cloud-1", "#cloud-2"], 300, 0));
+  home.add(moveToX(["#cloud-1", "#cloud-2"], 300, 0.3));
+  home.add(hideTarget("#cloud-1, #cloud-2"), "-=0.5");
   home.add(showGreenSignal(), "-=0.5");
 
   // frame 4
@@ -157,10 +154,10 @@ export default function animationDesktop() {
         opacity: 0,
       })
       .set("#question .block:nth-child(1)", {
-        translateX: -100,
+        x: -100,
       })
       .set("#question .block:nth-child(3)", {
-        translateX: 100,
+        x: 100,
       })
       .to("#question h3", {
         opacity: 1,
@@ -197,7 +194,7 @@ export default function animationDesktop() {
       .timeline()
       .to("#question .block:nth-child(1)", {
         opacity: 1,
-        translateX: 0,
+        x: 0,
       })
       .to(
         "#grass-1",
@@ -255,7 +252,7 @@ export default function animationDesktop() {
       .timeline()
       .to("#question .block:nth-child(3)", {
         opacity: 1,
-        translateX: 0,
+        x: 0,
       })
       .to(
         "#grass-1",
@@ -310,7 +307,7 @@ export default function animationDesktop() {
         opacity: 0,
       })
       .set("#role .container", {
-        translateY: 30,
+        y: 30,
       })
   );
 
@@ -325,7 +322,7 @@ export default function animationDesktop() {
   // frame 3
   role.add(
     gsap.timeline().to("#role .container", {
-      translateY: 0,
+      y: 0,
       opacity: 1,
     })
   );
@@ -335,7 +332,7 @@ export default function animationDesktop() {
   role.add(
     gsap.timeline().to("#role .container", {
       opacity: 0,
-      translateY: 30,
+      y: 30,
     }),
     "-=0.5"
   );
@@ -356,7 +353,7 @@ export default function animationDesktop() {
       opacity: 0,
     })
     .set("#theme .block", {
-      translateY: 200,
+      y: 200,
     });
   // frame 1
   theme.add(
@@ -378,7 +375,7 @@ export default function animationDesktop() {
   theme.add(
     gsap.timeline().to("#theme .block:nth-child(1)", {
       opacity: 1,
-      translateY: 0,
+      y: 0,
     })
   );
 
@@ -388,13 +385,13 @@ export default function animationDesktop() {
       .timeline()
       .to("#theme .block:nth-child(1)", {
         opacity: 0,
-        translateY: -500,
+        y: -500,
       })
       .to(
         "#theme .block:nth-child(2)",
         {
           opacity: 1,
-          translateY: -300,
+          y: -300,
         },
         "-=0.5"
       )
@@ -406,13 +403,13 @@ export default function animationDesktop() {
       .timeline()
       .to("#theme .block:nth-child(2)", {
         opacity: 0,
-        translateY: -800,
+        y: -800,
       })
       .to(
         "#theme .block:nth-child(3)",
         {
           opacity: 1,
-          translateY: -600,
+          y: -600,
         },
         "-=0.5"
       )
@@ -422,7 +419,7 @@ export default function animationDesktop() {
   theme.add(
     gsap.timeline().to("#theme .block:nth-child(3)", {
       opacity: 0,
-      translateY: -1000,
+      y: -1000,
     })
   );
 
@@ -455,7 +452,7 @@ export default function animationDesktop() {
       opacity: 0,
     })
     .set("#schedule li > div:first-child", {
-      translateY: "10%",
+      y: "10%",
     })
     .set("#cloud-3", {
       left: "-30%",
@@ -480,7 +477,7 @@ export default function animationDesktop() {
     gsap
       .timeline()
       .to("#schedule li:nth-child(1) > div:first-child", {
-        translateY: 0,
+        y: 0,
       })
       .to(
         "#schedule li:nth-child(1) > div",
@@ -496,7 +493,7 @@ export default function animationDesktop() {
     gsap
       .timeline()
       .to("#schedule li:nth-child(2) > div:first-child", {
-        translateY: 0,
+        y: 0,
       })
       .to(
         "#schedule li:nth-child(2) > div",
@@ -512,7 +509,7 @@ export default function animationDesktop() {
     gsap
       .timeline()
       .to("#schedule li:nth-child(3) > div:first-child", {
-        translateY: 0,
+        y: 0,
       })
       .to(
         "#schedule li:nth-child(3) > div",
@@ -529,7 +526,7 @@ export default function animationDesktop() {
       .timeline()
 
       .to("#schedule ul.container", {
-        translateY: -30,
+        y: -30,
         opacity: 0,
       })
       .to(
@@ -654,10 +651,10 @@ export default function animationDesktop() {
       .fromTo(
         "#prize .container",
         {
-          translateX: "-15%",
+          x: "-15%",
         },
         {
-          translateX: 0,
+          x: 0,
           duration: 1,
         },
         "-=1"
@@ -683,7 +680,7 @@ export default function animationDesktop() {
       .to(
         "#prize .container",
         {
-          translateX: "15%",
+          x: "15%",
           duration: 1,
         },
         "-=1"
@@ -711,24 +708,24 @@ export default function animationDesktop() {
       opacity: 0,
     })
     .set("#sponsor li:nth-child(1)", {
-      yPercent: 10,
+      y: "10%",
     })
     .set("#sponsor li:nth-child(2)", {
-      yPercent: 30,
+      y: "30%",
     })
     .set("#sponsor li:nth-child(3)", {
-      yPercent: 50,
+      y: "50%",
     })
     .set("#tree-1, #tree-2", {
       scale: 1.5,
-      translateY: "10%",
+      y: "10%",
       opacity: 0,
     })
     .set("#tree-1", {
-      translateX: "-50%",
+      x: "-50%",
     })
     .set("#tree-2", {
-      translateX: "50%",
+      x: "50%",
     });
 
   // frame 1
@@ -741,8 +738,8 @@ export default function animationDesktop() {
       .to(
         "#tree-1",
         {
-          translateX: "-20%",
-          translateY: "0%",
+          x: "-20%",
+          y: "0%",
           opacity: 1,
         },
         "-=0.5"
@@ -750,8 +747,8 @@ export default function animationDesktop() {
       .to(
         "#tree-2",
         {
-          translateX: "20%",
-          translateY: "0%",
+          x: "20%",
+          y: "0%",
           opacity: 1,
         },
         "-=0.5"
@@ -769,14 +766,19 @@ export default function animationDesktop() {
       .to(
         "#dog",
         {
-          translateX: "-5%",
+          x: "-5%",
         },
         "-=0.5"
       )
-      .to("#pig", {
-        scale: 0.8,
-        translateX: "5%",
-      })
+      .to(
+        "#pig",
+        {
+          scale: 0.8,
+          x: "5%",
+          y: "10%",
+        },
+        "-=0.5"
+      )
   );
 
   // frame 2
@@ -785,7 +787,7 @@ export default function animationDesktop() {
       .timeline()
       .to("#tree-1, #tree-2", {
         scale: 1,
-        translateX: "0%",
+        x: "0%",
       })
       .to(
         "#sponsor ul",
@@ -797,7 +799,7 @@ export default function animationDesktop() {
       .to(
         "#sponsor li",
         {
-          yPercent: 0,
+          y: "0%",
         },
         "-=0.5"
       )
@@ -820,7 +822,7 @@ export default function animationDesktop() {
       .to(
         "#tree-1",
         {
-          translateX: "20%",
+          x: "20%",
           opacity: 0,
           scale: 0.7,
         },
@@ -829,7 +831,7 @@ export default function animationDesktop() {
       .to(
         "#tree-2",
         {
-          translateX: "-20%",
+          x: "-20%",
           opacity: 0,
           scale: 0.7,
         },
@@ -838,13 +840,13 @@ export default function animationDesktop() {
       .fromTo(
         "#cloud-1",
         {
-          translateX: "-100%",
-          translateY: "70%",
+          x: "-100%",
+          y: "70%",
           scale: 1,
         },
         {
-          translateX: "5%",
-          translateY: "50%",
+          x: "-15%",
+          y: "50%",
           scale: 1,
         },
         "-=0.5"
@@ -852,13 +854,13 @@ export default function animationDesktop() {
       .fromTo(
         "#cloud-2",
         {
-          translateX: "100%",
-          translateY: "70%",
+          x: "100%",
+          y: "70%",
           scale: 1,
         },
         {
-          translateX: "-5%",
-          translateY: "50%",
+          x: "15%",
+          y: "50%",
           scale: 1,
         },
         "-=0.5"
@@ -900,7 +902,7 @@ export default function animationDesktop() {
       .to(
         "#dog",
         {
-          translateX: "0%",
+          x: "0%",
         },
         "-=0.5"
       )
@@ -914,7 +916,7 @@ export default function animationDesktop() {
       .to(
         "#pig",
         {
-          translateX: "0%",
+          x: "0%",
           scale: 1,
         },
         "-=0.5"
@@ -922,16 +924,16 @@ export default function animationDesktop() {
       .to(
         "#cloud-1",
         {
-          translateX: "50%",
-          translateY: "20%",
+          x: "30%",
+          y: "20%",
         },
         "-=0.5"
       )
       .to(
         "#cloud-2",
         {
-          translateX: "-50%",
-          translateY: "20%",
+          x: "-30%",
+          y: "20%",
         },
         "-=0.5"
       )
@@ -944,23 +946,23 @@ export default function animationDesktop() {
       .fromTo(
         "#goal-line-l",
         {
-          translateX: "2%",
+          x: "2%",
         },
         {
           rotate: "-5deg",
-          translateX: "0%",
-          translateY: "30%",
+          x: "0%",
+          y: "30%",
         }
       )
       .fromTo(
         "#goal-line-r",
         {
-          translateX: "-2%",
+          x: "-2%",
         },
         {
           rotate: "5deg",
-          translateX: "0%",
-          translateY: "30%",
+          x: "0%",
+          y: "30%",
         },
         "-=0.5"
       )
@@ -972,9 +974,23 @@ export default function animationDesktop() {
         "-=0.5"
       )
       .to(
+        "#dog",
+        {
+          x: "-20%",
+        },
+        "-=0.5"
+      )
+      .to(
+        "#pig",
+        {
+          x: "20%",
+        },
+        "-=0.5"
+      )
+      .to(
         "#cloud-1",
         {
-          translateX: "100%",
+          x: "50%",
           scale: 0.8,
         },
         "-=0.5"
@@ -982,7 +998,7 @@ export default function animationDesktop() {
       .to(
         "#cloud-2",
         {
-          translateX: "-100%",
+          x: "-50%",
           scale: 0.8,
         },
         "-=0.5"
@@ -994,13 +1010,13 @@ export default function animationDesktop() {
     gsap
       .timeline()
       .to("#goal-line-l", {
-        translateX: "-50%",
+        x: "-50%",
         opacity: 0,
       })
       .to(
         "#goal-line-r",
         {
-          translateX: "50%",
+          x: "50%",
           opacity: 0,
         },
         "-=0.5"
@@ -1013,9 +1029,23 @@ export default function animationDesktop() {
         "-=0.5"
       )
       .to(
+        "#dog",
+        {
+          x: "-40%",
+        },
+        "-=0.5"
+      )
+      .to(
+        "#pig",
+        {
+          x: "40%",
+        },
+        "-=0.5"
+      )
+      .to(
         "#cloud-1",
         {
-          translateX: "150%",
+          x: "100%",
           scale: 0.6,
           opacity: 0,
         },
@@ -1024,7 +1054,7 @@ export default function animationDesktop() {
       .to(
         "#cloud-2",
         {
-          translateX: "-150%",
+          x: "-100%",
           scale: 0.6,
           opacity: 0,
         },
@@ -1034,10 +1064,26 @@ export default function animationDesktop() {
 
   // frame 4
   finish.add(
-    gsap.timeline().to("#dog, #cat, #pig", {
-      scale: 2,
-      opacity: 0,
-    })
+    gsap
+      .timeline()
+      .to("#dog, #cat, #pig", {
+        scale: 2,
+        opacity: 0,
+      })
+      .to(
+        "#dog",
+        {
+          x: "-100%",
+        },
+        "-=0.5"
+      )
+      .to(
+        "#pig",
+        {
+          x: "100%",
+        },
+        "-=0.5"
+      )
   );
 
   // frame 5
