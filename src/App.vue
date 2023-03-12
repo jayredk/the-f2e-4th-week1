@@ -53,6 +53,27 @@ onMounted(() => {
     <AppSignals />
   </div>
 
+  <div
+    id="map"
+    class="z-10 hidden max-w-[224px] lg:fixed lg:bottom-8 lg:left-12 lg:block"
+  >
+    <div class="relative">
+      <img src="./assets/images/main/map.svg" alt="map" />
+      <img
+        id="map-finish"
+        class="absolute top-0 opacity-0"
+        src="./assets/images/main/map_finish.svg"
+        alt="map"
+      />
+      <img
+        id="map-now"
+        class="absolute top-[30%] left-0"
+        src="./assets/images/main/map_now.gif"
+        alt="map"
+      />
+    </div>
+  </div>
+
   <a
     id="join-btn"
     class="fixed bottom-5 right-5 z-10 hidden max-w-[103px] lg:flex lg:flex-col lg:items-center"

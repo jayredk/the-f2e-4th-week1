@@ -102,10 +102,13 @@ export default function animationDesktop() {
     .timeline({
       scrollTrigger: {
         trigger: "#home",
+        start: "top+=1 top",
         end: "bottom+=500 top",
         pin: true,
         scrub: 3,
         markers: true,
+        preventOverlaps: true,
+        fastScrollEnd: true,
       },
     })
     .set("#cloud-1", {
@@ -140,6 +143,8 @@ export default function animationDesktop() {
     scrollTrigger: {
       trigger: "#question",
       markers: true,
+      preventOverlaps: true,
+      fastScrollEnd: true,
       scrub: 3,
       pin: true,
       pinSpacing: false,
@@ -183,6 +188,18 @@ export default function animationDesktop() {
         "#grass-2",
         {
           y: -100,
+        },
+        "-=0.5"
+      )
+      .fromTo(
+        "#map-now",
+        {
+          top: "30%",
+          left: "0%",
+        },
+        {
+          top: "0%",
+          left: "16%",
         },
         "-=0.5"
       )
@@ -277,15 +294,26 @@ export default function animationDesktop() {
   // frame 5
   question.add(hideTarget("#question"));
   question.add(
-    gsap.timeline().fromTo(
-      "#character",
-      {
-        scale: 0.75,
-      },
-      {
-        scale: 1,
-      }
-    ),
+    gsap
+      .timeline()
+      .fromTo(
+        "#character",
+        {
+          scale: 0.75,
+        },
+        {
+          scale: 1,
+        }
+      )
+      .to(
+        "#map-now",
+        {
+          top: "5%",
+          left: "44%",
+          immediateRender: false,
+        },
+        "-=0.5"
+      ),
     "-=0.5"
   );
 
@@ -296,6 +324,8 @@ export default function animationDesktop() {
       pin: true,
       pinSpacing: false,
       markers: true,
+      preventOverlaps: true,
+      fastScrollEnd: true,
     },
   });
 
@@ -346,6 +376,8 @@ export default function animationDesktop() {
         scrub: 3,
         pin: true,
         markers: true,
+        preventOverlaps: true,
+        fastScrollEnd: true,
         pinSpacing: false,
       },
     })
@@ -366,6 +398,15 @@ export default function animationDesktop() {
         "#theme h3, #theme h5",
         {
           opacity: 1,
+        },
+        "-=0.5"
+      )
+      .to(
+        "#map-now",
+        {
+          top: "6%",
+          left: "75%",
+          immediateRender: false,
         },
         "-=0.5"
       )
@@ -446,6 +487,8 @@ export default function animationDesktop() {
         scrub: 3,
         pin: true,
         markers: true,
+        preventOverlaps: true,
+        fastScrollEnd: true,
       },
     })
     .set("#schedule li > div", {
@@ -467,9 +510,20 @@ export default function animationDesktop() {
 
   // frame 1
   event.add(
-    gsap.timeline().to("#date-line-mask", {
-      left: "100%",
-    })
+    gsap
+      .timeline()
+      .to("#date-line-mask", {
+        left: "100%",
+      })
+      .to(
+        "#map-now",
+        {
+          top: "36%",
+          left: "72%",
+          immediateRender: false,
+        },
+        "-=0.5"
+      )
   );
 
   // frame 2
@@ -591,6 +645,15 @@ export default function animationDesktop() {
         },
         "-=1"
       )
+      .to(
+        "#map-now",
+        {
+          top: "51%",
+          left: "50%",
+          immediateRender: false,
+        },
+        "-=1"
+      )
   );
 
   // frame 6
@@ -702,6 +765,8 @@ export default function animationDesktop() {
         scrub: 3,
         pin: true,
         markers: true,
+        preventOverlaps: true,
+        fastScrollEnd: true,
       },
     })
     .set("#sponsor h3, #sponsor ul.container", {
@@ -776,6 +841,15 @@ export default function animationDesktop() {
           scale: 0.8,
           x: "5%",
           y: "10%",
+        },
+        "-=0.5"
+      )
+      .to(
+        "#map-now",
+        {
+          top: "72%",
+          left: "32%",
+          immediateRender: false,
         },
         "-=0.5"
       )
@@ -874,6 +948,8 @@ export default function animationDesktop() {
       pin: true,
       scrub: 3,
       markers: true,
+      preventOverlaps: true,
+      fastScrollEnd: true,
     },
   });
 
@@ -934,6 +1010,21 @@ export default function animationDesktop() {
         {
           x: "-30%",
           y: "20%",
+        },
+        "-=0.5"
+      )
+      .to(
+        "#map-now",
+        {
+          top: "63%",
+          left: "10.5%",
+        },
+        "-=0.5"
+      )
+      .to(
+        "#map-finish",
+        {
+          opacity: 1,
         },
         "-=0.5"
       )
@@ -1129,6 +1220,13 @@ export default function animationDesktop() {
       )
       .to(
         "#join-btn",
+        {
+          opacity: 0,
+        },
+        "-=0.5"
+      )
+      .to(
+        "#map",
         {
           opacity: 0,
         },
