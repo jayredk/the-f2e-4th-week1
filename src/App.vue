@@ -1,6 +1,6 @@
 <script setup>
 import { gsap } from "gsap";
-import { onMounted } from "vue";
+import { ref, onMounted } from "vue";
 import AppHeader from "@/components/AppHeader.vue";
 import AppSignals from "@/components/AppSignals.vue";
 import AppHome from "@/components/AppHome.vue";
@@ -10,6 +10,36 @@ import AppTheme from "@/components/AppTheme.vue";
 import AppEvent from "@/components/AppEvent.vue";
 import AppSponsor from "@/components/AppSponsor.vue";
 import animation from "./animation";
+
+const dog = ref(null);
+const cat = ref(null);
+const pig = ref(null);
+
+function vTranslateX(target, x) {
+  const oTarget = target.value;
+  oTarget.style.transform = `translateX(${x})`;
+}
+function move(e) {
+  const mouseXaxis = e.clientX;
+  const { left, width } = cat.value.getBoundingClientRect();
+  const center = left + width / 2;
+
+  if (mouseXaxis > center) {
+    vTranslateX(dog, "-15%");
+    vTranslateX(cat, "-10%");
+    vTranslateX(pig, "10%");
+  } else {
+    vTranslateX(dog, "-10%");
+    vTranslateX(cat, "10%");
+    vTranslateX(pig, "15%");
+  }
+}
+
+function reset() {
+  vTranslateX(dog, "0%");
+  vTranslateX(cat, "0%");
+  vTranslateX(pig, "0%");
+}
 
 onMounted(() => {
   const { animationDesktop } = animation;
@@ -92,6 +122,7 @@ onMounted(() => {
     <div
       id="character"
       class="container fixed bottom-0 left-0 right-0 z-10 flex origin-bottom items-center justify-center lg:max-w-[900px] xl:max-w-[1175px]"
+      @mouseleave="reset"
     >
       <img
         class="absolute bottom-0 -z-10"
@@ -100,21 +131,27 @@ onMounted(() => {
       />
       <img
         id="dog"
-        class="w-[30%]"
+        ref="dog"
+        class="w-[30%] transition-transform duration-300"
         src="@/assets/images/character/character_f2e.gif"
         alt="dog"
+        @mouseenter="move"
       />
       <img
         id="cat"
-        class="w-[30%]"
+        ref="cat"
+        class="w-[30%] transition-transform duration-300"
         src="@/assets/images/character/character_ui.gif"
         alt="cat"
+        @mouseenter="move"
       />
       <img
         id="pig"
-        class="w-[30%]"
+        ref="pig"
+        class="w-[30%] transition-transform duration-300"
         src="@/assets/images/character/character_team.gif"
         alt="pig"
+        @mouseenter="move"
       /><img
         id="grass-1"
         class="absolute -bottom-[30%] -left-[10%] -z-20 hidden w-[150px] origin-bottom scale-x-[-1] lg:block"
