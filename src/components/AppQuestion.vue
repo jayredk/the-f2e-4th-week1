@@ -6,7 +6,9 @@
       你是否也有以下困擾？
     </h3>
 
-    <div class="container mb-16 text-center lg:flex lg:max-w-[80%]">
+    <div
+      class="container mb-16 text-center lg:flex lg:max-w-[95%] xl:max-w-[80%]"
+    >
       <div class="block lg:mx-2">
         <h4 class="text-highlight">羨慕別人的酷酷網頁動畫？</h4>
         <picture>
