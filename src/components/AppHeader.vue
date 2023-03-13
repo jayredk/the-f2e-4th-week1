@@ -20,36 +20,44 @@ const isActive = ref(false);
       <nav id="navbar" class="h-screen bg-primary px-10 pt-10 text-secondary">
         <ul>
           <li class="group mb-10">
-            <img
-              class="mx-auto mb-1 w-[60px] group-hover:scale-[1.2]"
-              src="@/assets/images/ic/ic_menu_info.png"
-              alt="menu_info"
-            />
-            關卡資訊
+            <a href="https://2022.thef2e.com/news">
+              <img
+                class="mx-auto mb-1 w-[60px] group-hover:scale-[1.2]"
+                src="@/assets/images/ic/ic_menu_info.png"
+                alt="menu_info"
+              />
+              關卡資訊
+            </a>
           </li>
           <li class="group mb-10">
-            <img
-              class="mx-auto mb-1 w-[60px] group-hover:scale-[1.2]"
-              src="@/assets/images/ic/ic_menu_list.png"
-              alt="menu_list"
-            />
-            作品列表
+            <a href="https://2022.thef2e.com/works">
+              <img
+                class="mx-auto mb-1 w-[60px] group-hover:scale-[1.2]"
+                src="@/assets/images/ic/ic_menu_list.png"
+                alt="menu_list"
+              />
+              作品列表
+            </a>
           </li>
           <li class="group mb-10">
-            <img
-              class="mx-auto mb-1 w-[60px] group-hover:scale-[1.2]"
-              src="@/assets/images/ic/ic_menu_strategy.png"
-              alt="menu_strategy"
-            />
-            攻略資源
+            <a href="https://hackmd.io/ofJD4K7iSI65V19zxC7d0w">
+              <img
+                class="mx-auto mb-1 w-[60px] group-hover:scale-[1.2]"
+                src="@/assets/images/ic/ic_menu_strategy.png"
+                alt="menu_strategy"
+              />
+              攻略資源
+            </a>
           </li>
           <li class="group">
-            <img
-              class="mx-auto mb-1 w-[60px] group-hover:scale-[1.2]"
-              src="@/assets/images/ic/ic_menu_job.png"
-              alt="menu_job"
-            />
-            求職專區
+            <a href="https://2022.thef2e.com/jobs">
+              <img
+                class="mx-auto mb-1 w-[60px] group-hover:scale-[1.2]"
+                src="@/assets/images/ic/ic_menu_job.png"
+                alt="menu_job"
+              />
+              求職專區
+            </a>
           </li>
         </ul>
       </nav>
@@ -79,10 +87,11 @@ const isActive = ref(false);
       alt="logo"
     />
 
-    <button
+    <a
+      href="https://2022.thef2e.com/users"
       class="fixed top-3 right-2 z-10 mr-2 w-[40px] lg:top-[30px] lg:right-[15px]"
     >
       <img src="@/assets/images/btn/btn_user.png" alt="profile-btn" />
-    </button>
+    </a>
   </div>
 </template>
