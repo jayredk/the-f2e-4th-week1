@@ -16,7 +16,10 @@ import AppEventPrize from "./AppEventPrize.vue";
         class="mb-20 flex basis-1/3 flex-col items-center justify-center lg:mb-0"
       >
         <div class="flex flex-col items-center justify-center bg-secondary">
-          <div class="flex h-[160px] flex-col items-center justify-center">
+          <a
+            href="https://2022.thef2e.com/signup"
+            class="flex h-[160px] flex-col items-center justify-center"
+          >
             <img
               src="@/assets/images/btn/btn_joinHand.gif"
               alt="joinHand"
@@ -27,7 +30,7 @@ import AppEventPrize from "./AppEventPrize.vue";
               alt="join"
               class="mb-3 w-[103px]"
             />
-          </div>
+          </a>
           <h2 class="mb-3 text-highlight">SIGN UP</h2>
           <h4 class="mb-3 rounded-full bg-primary px-7 py-2 text-white">
             10/13 - 11/6

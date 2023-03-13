@@ -107,7 +107,7 @@ onMounted(() => {
   <a
     id="join-btn"
     class="fixed bottom-5 right-5 z-10 hidden max-w-[103px] lg:flex lg:flex-col lg:items-center"
-    href="#"
+    href="https://2022.thef2e.com/signup"
   >
     <p class="text-2xl font-bold text-primary">JOIN</p>
     <img
