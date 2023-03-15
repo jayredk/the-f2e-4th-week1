@@ -8,8 +8,8 @@ const isActive = ref(false);
   <div class="fixed z-20 h-[60px] w-full bg-secondary lg:bg-transparent">
     <div
       id="mobile-mask"
-      :class="{ 'opacity-50': isActive }"
-      class="fixed inset-0 z-20 bg-secondary opacity-0 transition-opacity duration-300 lg:hidden"
+      :class="{ 'opacity-50': isActive, '!visible': isActive }"
+      class="invisible fixed inset-0 z-20 bg-secondary opacity-0 transition-opacity duration-300 lg:hidden"
     ></div>
     <div
       id="panel"
