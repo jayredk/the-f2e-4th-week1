@@ -66,7 +66,7 @@ function showGreenSignal() {
       "#signal-text",
       {
         text: "GO!!",
-        left: "5rem",
+        x: "30%",
       },
       "-=0.5"
     )
@@ -191,15 +191,11 @@ export default function animationDesktop() {
         },
         "-=0.5"
       )
-      .fromTo(
+      .to(
         "#map-now",
         {
-          top: "30%",
-          left: "0%",
-        },
-        {
-          top: "0%",
-          left: "16%",
+          x: "122%",
+          y: "-150%",
         },
         "-=0.5"
       )
@@ -308,9 +304,8 @@ export default function animationDesktop() {
       .to(
         "#map-now",
         {
-          top: "5%",
-          left: "44%",
-          immediateRender: false,
+          x: "330%",
+          y: "-120%",
         },
         "-=0.5"
       ),
@@ -404,9 +399,7 @@ export default function animationDesktop() {
       .to(
         "#map-now",
         {
-          top: "6%",
-          left: "75%",
-          immediateRender: false,
+          x: "563%",
         },
         "-=0.5"
       )
@@ -498,10 +491,10 @@ export default function animationDesktop() {
       y: "10%",
     })
     .set("#cloud-3", {
-      left: "-35%",
+      x: "-100%",
     })
     .set("#cloud-4", {
-      right: "-35%",
+      x: "100%",
     })
     .set("#schedule-question", {
       scale: 2,
@@ -513,14 +506,13 @@ export default function animationDesktop() {
     gsap
       .timeline()
       .to("#date-line-mask", {
-        left: "100%",
+        x: "100%",
       })
       .to(
         "#map-now",
         {
-          top: "36%",
-          left: "72%",
-          immediateRender: false,
+          x: "532%",
+          y: "30%",
         },
         "-=0.5"
       )
@@ -607,14 +599,14 @@ export default function animationDesktop() {
       .to(
         "#cloud-3",
         {
-          left: "-5%",
+          x: "-25%",
         },
         "-=0.5"
       )
       .to(
         "#cloud-4",
         {
-          right: "-5%",
+          x: "25%",
         },
         "-=0.5"
       ),
@@ -632,7 +624,7 @@ export default function animationDesktop() {
       .to(
         "#cloud-3",
         {
-          left: "5%",
+          x: "25%",
           duration: 1,
         },
         "-=1"
@@ -640,7 +632,7 @@ export default function animationDesktop() {
       .to(
         "#cloud-4",
         {
-          right: "5%",
+          x: "-25%",
           duration: 1,
         },
         "-=1"
@@ -648,9 +640,8 @@ export default function animationDesktop() {
       .to(
         "#map-now",
         {
-          top: "51%",
-          left: "50%",
-          immediateRender: false,
+          x: "371%",
+          y: "102%",
         },
         "-=1"
       )
@@ -847,9 +838,8 @@ export default function animationDesktop() {
       .to(
         "#map-now",
         {
-          top: "72%",
-          left: "32%",
-          immediateRender: false,
+          x: "240%",
+          y: "205%",
         },
         "-=0.5"
       )
@@ -1016,13 +1006,16 @@ export default function animationDesktop() {
       .to(
         "#map-now",
         {
-          top: "63%",
-          left: "10.5%",
+          x: "78%",
+          y: "163%",
         },
         "-=0.5"
       )
-      .to(
+      .fromTo(
         "#map-finish",
+        {
+          opacity: 0,
+        },
         {
           opacity: 1,
         },
