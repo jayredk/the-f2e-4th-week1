@@ -1,9 +1,9 @@
 <template>
   <div
     id="participants"
-    class="flex flex-col text-primary lg:flex-row lg:items-start lg:justify-around"
+    class="flex flex-col items-center text-primary lg:flex-row lg:items-start lg:justify-around"
   >
-    <div class="mb-4 text-center">
+    <div class="mb-4 text-center lg:w-[20%]">
       <h4 class="mb-2">前端工程師</h4>
       <div
         class="mx-auto flex w-[100px] items-center justify-center rounded-[40px] bg-primary px-5 py-1 text-white lg:w-[135px]"
@@ -53,7 +53,7 @@
         <span class="text-lg lg:text-2xl">920</span>
       </div>
     </div>
-    <div class="mb-4 text-center">
+    <div class="mb-4 text-center lg:w-[20%]">
       <h4 class="mb-2">UI設計師</h4>
       <div
         class="mx-auto flex w-[100px] items-center justify-center rounded-[40px] bg-primary px-5 py-1 text-white lg:w-[135px]"
@@ -103,7 +103,7 @@
         <span class="text-lg lg:text-2xl">110</span>
       </div>
     </div>
-    <div class="text-center">
+    <div class="text-center lg:w-[20%]">
       <h4 class="mb-2">團體組</h4>
       <div
         class="mx-auto flex w-[100px] items-center justify-center rounded-[40px] bg-primary px-5 py-1 text-white lg:w-[135px]"
