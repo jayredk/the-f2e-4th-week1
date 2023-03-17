@@ -117,7 +117,7 @@ import AppEventPrize from "./AppEventPrize.vue";
 
     <h2
       id="schedule-question"
-      class="my-[25%] text-center text-highlight lg:absolute lg:top-[20%] lg:left-0 lg:right-0 lg:my-0"
+      class="flex min-h-screen origin-center flex-col justify-center text-center text-highlight lg:absolute lg:top-[20%] lg:left-0 lg:right-0 lg:block lg:h-auto lg:origin-top"
     >
       區區修煉<br class="lg:hidden" />已經無法滿足了嗎？
     </h2>

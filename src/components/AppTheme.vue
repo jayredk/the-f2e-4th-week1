@@ -1,13 +1,11 @@
 <template>
   <section id="theme">
     <h3
-      class="relative z-10 mb-3 mt-8 w-full bg-[url('@/assets/images/bg/bg_talking_c.png')] bg-[length:100%_100%] bg-bottom bg-no-repeat pb-6 pt-3 text-center text-2xl font-bold text-primary lg:bg-[url('@/assets/images/bg/bg_talking.png')] lg:bg-[length:940px_151px] lg:px-16 lg:pt-6 lg:pb-16 lg:text-6xl"
+      class="relative mb-3 mt-8 w-full bg-[url('@/assets/images/bg/bg_talking_c.png')] bg-[length:100%_100%] bg-bottom bg-no-repeat pb-6 pt-3 text-center text-2xl font-bold text-primary lg:bg-[url('@/assets/images/bg/bg_talking.png')] lg:bg-[length:940px_151px] lg:px-16 lg:pt-6 lg:pb-16 lg:text-6xl"
     >
       年度最強合作，三大主題來襲
     </h3>
-    <h5
-      class="relative z-10 mb-10 text-center text-xl text-secondary-dark lg:mb-24"
-    >
+    <h5 class="relative mb-10 text-center text-xl text-secondary-dark lg:mb-24">
       各路廠商強強聯手<br />共同設計出接地氣的網頁互動挑戰關卡
     </h5>
     <div class="container mb-16 text-center lg:max-w-[80%] lg:text-left">

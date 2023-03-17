@@ -1,5 +1,5 @@
 <template>
-  <div id="signals" class="fixed top-[75%] right-0 lg:top-[55%]">
+  <div id="signals" class="absolute top-[7%] right-0 lg:fixed lg:top-[55%]">
     <img
       class="relative z-10 w-[120px] lg:w-[275px]"
       src="@/assets/images/main/ready_frame.png"

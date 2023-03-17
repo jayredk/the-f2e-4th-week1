@@ -4,7 +4,7 @@ import AppParticipants from "@/components/AppParticipants.vue";
 <template>
   <section
     id="home"
-    class="container mb-20 pt-[91px] lg:max-w-[900px] lg:pt-[268px] xl:max-w-[1175px]"
+    class="container mb-20 min-h-screen pt-[91px] lg:max-w-[900px] lg:pt-[268px] xl:max-w-[1175px]"
   >
     <img
       id="logo-mobile"

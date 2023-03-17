@@ -1,7 +1,7 @@
 <template>
   <section id="sponsor" class="z-10 min-h-screen">
     <h3
-      class="mb-3 mt-8 w-full bg-[url('@/assets/images/bg/bg_talking_c.png')] bg-[length:100%_100%] bg-bottom bg-no-repeat pb-6 pt-3 text-center text-2xl font-bold text-primary lg:mb-16 lg:bg-[url('@/assets/images/bg/bg_talking.png')] lg:bg-[length:466px_151px] lg:px-16 lg:pt-6 lg:pb-16 lg:text-6xl"
+      class="mb-12 mt-8 w-full bg-[url('@/assets/images/bg/bg_talking_c.png')] bg-[length:100%_100%] bg-bottom bg-no-repeat pb-6 pt-3 text-center text-2xl font-bold text-primary lg:mb-16 lg:bg-[url('@/assets/images/bg/bg_talking.png')] lg:bg-[length:466px_151px] lg:px-16 lg:pt-6 lg:pb-16 lg:text-6xl"
     >
       贊助單位
     </h3>

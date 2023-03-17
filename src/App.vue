@@ -42,11 +42,15 @@ function reset() {
 }
 
 onMounted(() => {
-  const { animationDesktop } = animation;
+  const { animationDesktop, animationMobile } = animation;
   const mm = gsap.matchMedia();
 
   mm.add("(min-width: 1440px)", () => {
     animationDesktop();
+  });
+
+  mm.add("(max-width: 1439px)", () => {
+    animationMobile();
   });
 });
 </script>
@@ -70,13 +74,13 @@ onMounted(() => {
     />
     <img
       id="cloud-1"
-      class="fixed top-[55%] -left-5 w-[113px] md:w-[271px] lg:top-[15%] lg:w-[430px]"
+      class="absolute top-[5%] -left-5 w-[113px] md:w-[271px] lg:fixed lg:top-[15%] lg:w-[430px]"
       src="@/assets/images/bg/bg_decorate_01.png"
       alt="cloud-1"
     />
     <img
       id="cloud-2"
-      class="fixed top-[55%] -right-9 w-[127px] md:w-[305px] lg:-right-[3rem] lg:top-[20%] lg:w-[485px]"
+      class="absolute top-[5%] -right-9 w-[127px] md:w-[305px] lg:fixed lg:-right-[3rem] lg:top-[20%] lg:w-[485px]"
       src="@/assets/images/bg/bg_decorate_05.png"
       alt="cloud-2"
     />
@@ -166,13 +170,13 @@ onMounted(() => {
       />
       <img
         id="tree-1"
-        class="absolute bottom-[-5%] -left-[20%] -z-20 w-[331px]"
+        class="absolute bottom-[-5%] -left-[20%] -z-20 hidden w-[331px] lg:block"
         src="@/assets/images/bg/bg_decorate_04.png"
         alt="bg_decorate_04"
       />
       <img
         id="tree-2"
-        class="absolute bottom-[-5%] -right-[20%] -z-20 w-[342px]"
+        class="absolute bottom-[-5%] -right-[20%] -z-20 hidden w-[342px] lg:block"
         src="@/assets/images/bg/bg_decorate_08.png"
         alt="bg_decorate_08"
       />
@@ -190,7 +194,7 @@ onMounted(() => {
 
     <AppSponsor />
 
-    <div id="finish" class="relative z-20">
+    <div id="finish" class="relative lg:z-20">
       <section class="z-30 hidden min-h-screen lg:block">
         <div class="container relative max-w-[80%]">
           <img
@@ -223,10 +227,10 @@ onMounted(() => {
         id="signup"
         class="lg:absolute lg:top-[20%] lg:left-0 lg:right-0"
       >
-        <div class="container">
+        <div class="container flex min-h-screen flex-col justify-center">
           <img
             id="signup-logo"
-            class="mx-auto mb-40 w-[226px] lg:mb-0 lg:w-[520px]"
+            class="mx-auto mb-10 w-[226px] lg:mb-0 lg:w-[520px]"
             src="./assets/images/logo/logo.png"
             alt="logo"
           />
