@@ -12,7 +12,7 @@ export default function animationMobile() {
       end: "top-=300 top",
       // end: "bottom+=7800 top",
       scrub: 3,
-      markers: true,
+      // markers: true,
     },
     defaults: {
       duration: 1,
