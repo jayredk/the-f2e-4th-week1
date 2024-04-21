@@ -17,6 +17,7 @@
   }
   #app {
     position: relative;
+    overflow-x: hidden;
   }
   h1 {
     @apply font-bold text-xl leading-6 tracking-wider lg:text-4xl lg:leading-tight lg:tracking-wide;
